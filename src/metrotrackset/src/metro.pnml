@@ -247,8 +247,15 @@ item (FEAT_RAILTYPES, item_metro) {
 		property {
 			toolbar_caption:            string(str_metrotrack_toolbar_caption);
 			maintenance_cost:           12;
-			alternative_railtype_list:  ["3RDR", "MTRO",
-										 "SAA3", "SAB3", "SAC3", "SAD3", "SAE3"];
+			alternative_railtype_list:[
+				"3RDR",
+				"MTRO",
+				"SAA3",
+				"SAB3",
+				"SAC3",
+				"SAD3",
+				"SAE3",
+			];
 		}
 	}
 
