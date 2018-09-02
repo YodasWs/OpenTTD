@@ -28,7 +28,7 @@ gulp.task('default', gulp.series(
 					path.extname = '.nml';
 				}))
 				.pipe(include({
-					basePath: 'src',
+					basePath: './src/',
 					prefix: '#',
 				}))
 				.pipe(replace({

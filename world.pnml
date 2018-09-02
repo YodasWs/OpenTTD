@@ -7,27 +7,4 @@ grf {
 	url: string(URL);
 }
 
-town_names(towns_kr) {
-	{
-		text("Masan", 1),
-	}
-}
-
-town_names(towns_kr_suffix) {
-	{
-		text("-ri", 1),
-		text("-myeon", 1),
-		text("-gu", 1),
-		text("-gun", 1),
-		text("-si", 1),
-	}
-}
-
-town_names {
-	{
-		town_names(towns_kr, 1),
-	}
-	{
-		town_names(towns_kr_suffix, 1),
-	}
-}
+#include('towns_kr.pnml')
