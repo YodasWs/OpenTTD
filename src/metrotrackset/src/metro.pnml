@@ -163,7 +163,7 @@ switch (FEAT_RAILTYPES, SELF, switch_depots_opengfx_snow, terrain_type) {
 }
 
 if (param_metro > 0) {
-    if ((param_metro >= 2) || ((param_metro == 1) && (railtype_available("SAA3") || (loading_stage == LOADING_STAGE_RESERVE)))) {
+    if (param_metro >= 2 || (param_metro == 1 && (railtype_available("SAA3") || loading_stage == LOADING_STAGE_RESERVE))) {
         // Count number of activated railtypes
         param_railtype_activated = param_railtype_activated + 1;
         item (FEAT_RAILTYPES, item_metro) {
@@ -219,17 +219,51 @@ if (param_metro > 0) {
                     powered_railtype_list:          ["MGLV", "SSAZ", "SUAZ"];
                 }
             } else {
-                property {
-                    compatible_railtype_list:       ["RAIL", "ELRL",
-                                                     "SAAN", "SABN", "SACN", "SADN", "SAEN",
-                                                     "SAAE", "SABE", "SACE", "SADE", "SAEE",
-                                                     "SAAD", "SABD", "SACD", "SADD", "SAED",
-                                                     "SAAd", "SABd", "SACd", "SADd", "SAEd",
-                                                     "SAAA", "SABA", "SACA", "SADA", "SAEA",
-                                                     "SAAa", "SABa", "SACa", "SADa", "SAEa",
-                                                     "SAAZ", "SSAZ", "SUAZ"];
-                    powered_railtype_list:          ["SAAZ", "SSAZ", "SUAZ"];
-                }
+            // Set compatible and powered metro tracks
+			property {
+				compatible_railtype_list:[
+					"RAIL",
+					"ELRL",
+					"SAAN",
+					"SABN",
+					"SACN",
+					"SADN",
+					"SAEN",
+					"SAAE",
+					"SABE",
+					"SACE",
+					"SADE",
+					"SAEE",
+					"SAAD",
+					"SABD",
+					"SACD",
+					"SADD",
+					"SAED",
+					"SAAd",
+					"SABd",
+					"SACd",
+					"SADd",
+					"SAEd",
+					"SAAA",
+					"SABA",
+					"SACA",
+					"SADA",
+					"SAEA",
+					"SAAa",
+					"SABa",
+					"SACa",
+					"SADa",
+					"SAEa",
+					"SAAZ",
+					"SSAZ",
+					"SUAZ",
+				];
+				powered_railtype_list:[
+					"SAAZ",
+					"SSAZ",
+					"SUAZ",
+				];
+			}
             }
 
             // OpenTTD 1.1 19307
@@ -275,9 +309,9 @@ if (param_metro > 0) {
                 }
             }
 
-            /*
-            *  GRAPHICS
-            */
+            /**
+             * GRAPHICS
+             */
 
             if (param_extrasnow == 1) {
 				// Snowy version

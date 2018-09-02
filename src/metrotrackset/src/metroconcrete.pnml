@@ -142,8 +142,14 @@ if (param_metroconcrete > 0) {
                 property {
                     toolbar_caption:            string(str_metroconcretetrack_toolbar_caption);
                     maintenance_cost:           24;
-                    alternative_railtype_list:  ["MTRC",
-                                                 "SUAZ", "SUBZ", "SUCZ", "SUDZ", "SUEZ"];
+					alternative_railtype_list:  [
+						"MTRC",
+						"SUAZ",
+						"SUBZ",
+						"SUCZ",
+						"SUDZ",
+						"SUEZ",
+					];
                 }
             }
 

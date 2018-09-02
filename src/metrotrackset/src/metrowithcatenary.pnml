@@ -148,23 +148,76 @@ if (param_metrowithcatenary > 0) {
                                                      "MGLV", "SSAZ", "SUAZ"];
                 }
             } else {
-                property {
-                    compatible_railtype_list:       ["RAIL", "ELRL",
-                                                     "SAAN", "SABN", "SACN", "SADN", "SAEN",
-                                                     "SAAE", "SABE", "SACE", "SADE", "SAEE",
-                                                     "SAAD", "SABD", "SACD", "SADD", "SAED",
-                                                     "SAAd", "SABd", "SACd", "SADd", "SAEd",
-                                                     "SAAA", "SABA", "SACA", "SADA", "SAEA",
-                                                     "SAAa", "SABa", "SACa", "SADa", "SAEa",
-                                                     "SAA3", "SSAZ", "SUAZ"];
-                    powered_railtype_list:          ["ELRL",
-                                                     "SAAE", "SABE", "SACE", "SADE", "SAEE",
-                                                     "SAAD", "SABD", "SACD", "SADD", "SAED",
-                                                     "SAAd", "SABd", "SACd", "SADd", "SAEd",
-                                                     "SAAA", "SABA", "SACA", "SADA", "SAEA",
-                                                     "SAAa", "SABa", "SACa", "SADa", "SAEa",
-                                                     "SAA3", "SSAZ", "SUAZ"];
-                }
+			property {
+				compatible_railtype_list:[
+					"RAIL",
+					"ELRL",
+					"SAAN",
+					"SABN",
+					"SACN",
+					"SADN",
+					"SAEN",
+					"SAAE",
+					"SABE",
+					"SACE",
+					"SADE",
+					"SAEE",
+					"SAAD",
+					"SABD",
+					"SACD",
+					"SADD",
+					"SAED",
+					"SAAd",
+					"SABd",
+					"SACd",
+					"SADd",
+					"SAEd",
+					"SAAA",
+					"SABA",
+					"SACA",
+					"SADA",
+					"SAEA",
+					"SAAa",
+					"SABa",
+					"SACa",
+					"SADa",
+					"SAEa",
+					"SAA3",
+					"SSAZ",
+					"SUAZ",
+				];
+				powered_railtype_list:[
+					"ELRL",
+					"SAAE",
+					"SABE",
+					"SACE",
+					"SADE",
+					"SAEE",
+					"SAAD",
+					"SABD",
+					"SACD",
+					"SADD",
+					"SAED",
+					"SAAd",
+					"SABd",
+					"SACd",
+					"SADd",
+					"SAEd",
+					"SAAA",
+					"SABA",
+					"SACA",
+					"SADA",
+					"SAEA",
+					"SAAa",
+					"SABa",
+					"SACa",
+					"SADa",
+					"SAEa",
+					"SAA3",
+					"SSAZ",
+					"SUAZ",
+				];
+			}
             }
 
             // OpenTTD 1.1 19307
@@ -180,8 +233,14 @@ if (param_metrowithcatenary > 0) {
                 property {
                     toolbar_caption:            string(str_metrowithcatenarytrack_toolbar_caption);
                     maintenance_cost:           16;
-                    alternative_railtype_list:  ["3RDC",
-                                                 "SAAZ", "SABZ", "SACZ", "SADZ", "SAEZ"];
+					alternative_railtype_list:[
+						"3RDC",
+						"SAAZ",
+						"SABZ",
+						"SACZ",
+						"SADZ",
+						"SAEZ",
+					];
                 }
             }
 

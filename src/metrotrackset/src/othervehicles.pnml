@@ -36,9 +36,8 @@ if (hasbit(param_otherengines,0)) {
             }
         }
     }
-    /* modifying all possible combinations of the standardized railtype scheme will not work
-       this will result in an attempt to define separate railtypes for all these labels.
-    */
+    /* Modifying all possible combinations of the standardized railtype scheme will not work.
+     * This will result in an attempt to define separate railtypes for all these labels. */
 }
 
 // Allow electrified rail on metro track types
