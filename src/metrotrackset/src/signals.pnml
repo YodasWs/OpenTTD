@@ -1,11 +1,3 @@
-/*
- *  Copyright (C) 2012 Jasper Vries
- *  This file is part of Metro Track Set
- *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
- *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
- *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*/
-
 spriteset (spriteset_signals_block_green, "gfx/signals/signals_block.png") {
     template_signals(0,0)
 }
@@ -44,8 +36,8 @@ spriteset (spriteset_signals_path_twoway_red, "gfx/signals/signals_path_twoway.p
 }
 
 switch (FEAT_RAILTYPES, SELF, switch_signals_type, extra_callback_info2 & 0x00FFFFFF) {
-    //light signals
-    //TT         VV        SS
+    // Light signals
+    // TT          VV        SS
     (0 << 16) | (0 << 8) | 0 : spriteset_signals_block_red;
     (0 << 16) | (0 << 8) | 1 : spriteset_signals_block_green;
     (1 << 16) | (0 << 8) | 0 : spriteset_signals_block_entry_red;
@@ -58,11 +50,11 @@ switch (FEAT_RAILTYPES, SELF, switch_signals_type, extra_callback_info2 & 0x00FF
     (4 << 16) | (0 << 8) | 1 : spriteset_signals_path_twoway_green;
     (5 << 16) | (0 << 8) | 0 : spriteset_signals_path_oneway_red;
     (5 << 16) | (0 << 8) | 1 : spriteset_signals_path_oneway_green;
-    //sempahores are not defined, will use standard signals
+    // Sempahores are not defined, will use standard signals
     CB_FAILED;
 }
 
 switch (FEAT_RAILTYPES, SELF, switch_signals, param_customsignals) {
-    1: switch_signals_type; //only custom signals when parameter set
+    1: switch_signals_type; // Only custom signals when parameter set
     CB_FAILED;
 }

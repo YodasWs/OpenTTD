@@ -1,12 +1,4 @@
-/*
- *  Copyright (C) 2012 Jasper Vries
- *  This file is part of Metro Track Set
- *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
- *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
- *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*/
-
-// define the newgrf
+// Define the NewGRF
 grf {
 	grfid:	"\FB\FB\04\02";
 	name:	string(STR_GRF_NAME);
@@ -23,9 +15,9 @@ grf {
             max_value:  1;
             def_value:  0;
             names:  {
-                    0: string(str_param_opengfx);
-                    1: string(str_param_ttd);
-                    };
+				0: string(str_param_opengfx);
+				1: string(str_param_ttd);
+			};
         }
     }
     param 7 {
@@ -37,11 +29,11 @@ grf {
             max_value:  3;
             def_value:  0;
             names:  {
-                    0: string(str_param_auto);
-                    1: string(str_param_opengfx);
-                    2: string(str_param_ttd);
-                    3: string(str_param_japanset);
-                    };
+				0: string(str_param_auto);
+				1: string(str_param_opengfx);
+				2: string(str_param_ttd);
+				3: string(str_param_japanset);
+			};
         }
     }
     param 1 {
@@ -77,11 +69,11 @@ grf {
             max_value:  3;
             def_value:  3;
             names:  {
-                    0: string(str_param_otherengines_off);
-                    1: string(str_param_otherengines_RAIL);
-                    2: string(str_param_otherengines_ELRL);
-                    3: string(str_param_otherengines_RAILELRL);
-                    };
+				0: string(str_param_otherengines_off);
+				1: string(str_param_otherengines_RAIL);
+				2: string(str_param_otherengines_ELRL);
+				3: string(str_param_otherengines_RAILELRL);
+			};
         }
     }
     param 4 {
@@ -93,11 +85,11 @@ grf {
             max_value:  3;
             def_value:  1;
             names:  {
-                    0: string(str_param_metro_off);
-                    1: string(str_param_metro_separate_default);
-                    2: string(str_param_metro_replacemono);
-                    3: string(str_param_metro_replacemglv);
-                    };
+				0: string(str_param_metro_off);
+				1: string(str_param_metro_separate_default);
+				2: string(str_param_metro_replacemono);
+				3: string(str_param_metro_replacemglv);
+			};
         }
     }
     param 5 {
@@ -109,11 +101,11 @@ grf {
             max_value:  3;
             def_value:  1;
             names:  {
-                    0: string(str_param_metro_off);
-                    1: string(str_param_metro_separate_default);
-                    2: string(str_param_metro_replacemono);
-                    3: string(str_param_metro_replacemglv);
-                    };
+				0: string(str_param_metro_off);
+				1: string(str_param_metro_separate_default);
+				2: string(str_param_metro_replacemono);
+				3: string(str_param_metro_replacemglv);
+			};
         }
     }
     param 6 {
@@ -134,23 +126,21 @@ grf {
     }
 }
 
-//check for OpenTTD and version
+// Check for OpenTTD and version
 if (ttd_platform != PLATFORM_OPENTTD) {
-    //requires OpenTTD
+    // Requires OpenTTD
     error(FATAL, USED_WITH, "OpenTTD");
-}
-else {
-    //check for OpenTTD version
+} else {
+    // Check for OpenTTD version
     if (openttd_version < version_openttd(1, 0, 0, 18969)) {
-        //requires OpenTTD version
+        // Requires OpenTTD version
         error(FATAL, REQUIRES_OPENTTD, "1.0.0 / r18969");
-    }
-    else if (openttd_version < version_openttd(1, 0, 0, 18969)) {
-        //warn if not all features supported
+    } else if (openttd_version < version_openttd(1, 0, 0, 18969)) {
+        // Warn if not all features supported
         error(WARNING, string(str_low_version));
     }
 }
 
-//initialize parameters
+// Initialize parameters
 param_railtype_activated = 0;
 param_railtype_disabled = 0;

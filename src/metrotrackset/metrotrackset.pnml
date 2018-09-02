@@ -1,32 +1,20 @@
-/*
- *  Copyright (C) 2012 Jasper Vries
- *  This file is part of Metro Track Set
- *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
- *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
- *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*/
-
-/*
-* GRF HEADER
-*/
-
 //define grf
-#include "src/header.pnml"
+#include("src/header.pnml")
 //checks for other sets
-#include "src/checks.pnml"
+#include("src/checks.pnml")
 //include sprite templates
-#include "src/templates.pnml"
+#include("src/templates.pnml")
 
 /*
 * MAIN CONTENT
 */
 
-#include "src/signals.pnml"
-#include "src/metro.pnml"
-#include "src/metrowithcatenary.pnml"
-#include "src/metrounderground.pnml"
-#include "src/metroconcrete.pnml"
+#include("src/signals.pnml")
+#include("src/metro.pnml")
+#include("src/metrowithcatenary.pnml")
+#include("src/metrounderground.pnml")
+#include("src/metroconcrete.pnml")
 
-#include "src/othervehicles.pnml"
+#include("src/othervehicles.pnml")
 
-#include "src/footer.pnml"
+#include("src/footer.pnml")
