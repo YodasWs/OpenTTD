@@ -1,4 +1,7 @@
 # .gitignore
+custom_tags.txt
 node_modules
+*.grf
+*.nml
 *.swp
 *~
