@@ -19,10 +19,14 @@ gulp.task('default', gulp.series(
 			return gulp.src(['src/**/*.{lng,txt}'])
 				.pipe(replace({
 					src: 'package.json',
+					keepNoMatch: true,
+					prefix: '%',
+					suffix: '%',
 				}))
 				.pipe(gulp.dest('.'));
 		},
 		() => {
+			// Merge PNMLs together
 			return gulp.src(['*.pnml'])
 				.pipe(rename((path) => {
 					path.extname = '.nml';
@@ -38,6 +42,7 @@ gulp.task('default', gulp.series(
 		}
 	),
 	() => {
+		// Compile NMLs
 		return gulp.src(['*.nml'])
 			.pipe(exec('nmlc <%= file.path %> --default-lang=en.lng', {
 			}))

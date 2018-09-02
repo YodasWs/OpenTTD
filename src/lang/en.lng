@@ -1,4 +1,4 @@
 ##grflangid 0x00
 STR_GRF_NAME		:{TITLE}, v{VERSION}
-STR_GRF_DESCRIPTION	:%%description{}{}{COPYRIGHT}2018
-URL:%%homepage
+STR_GRF_DESCRIPTION	:%description%{}{}{COPYRIGHT}2018
+URL:%homepage%

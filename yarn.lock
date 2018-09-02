@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@yodasws/gulp-json-replace@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@yodasws/gulp-json-replace/-/gulp-json-replace-2.0.1.tgz#cd399f7af647df948a4a4a1a82e7602f7fda6137"
+"@yodasws/gulp-json-replace@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@yodasws/gulp-json-replace/-/gulp-json-replace-2.1.0.tgz#7ba9d84c31d811c3ad8ebbc6aa073d27719a05b9"
   dependencies:
     replacestream "2.0.0"
     through2 "0.6.3"
