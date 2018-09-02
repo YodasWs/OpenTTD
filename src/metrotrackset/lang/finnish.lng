@@ -1,0 +1,83 @@
+##grflangid 0x35
+##plural 0
+
+#Main grf title and description
+STR_GRF_NAME                    :{TITLE}
+STR_GRF_DESCRIPTION             :{SILVER}Metroraiteet OpenTTD:lle{}{}{BLACK}"Maanalaiset" metroraiteet saatavilla parametreistä.{}{}Lisenssi: GPLv2 tai korkeampi.{}Lisätietoja readme:ssa.
+STR_GRF_URL             :http://www.tt-forums.net/viewtopic.php?t=49476
+
+str_low_version         :OpenTTD versiosi on vanhentunut. Päivitä se nauttiaksesi kaikista tämän NewGRF:n ominaisuuksista.
+str_no_railtypes_enabled:Kaikki raidetyypit pois estetty. Ei ole järkeä ladata tätä valikoimaa, jos estät kaikki sen raidetyypit. Käy läpi parametriasetukset tai poista Metro Track Set käytöstä.
+str_no_free_slots       :Ei vapaita raidetyyppipaikkoja. Olet ladannut yhden tai useamman raidevalikoiman, joka tai jotka käyttävät kaikki raidetyyppipaikat. Harkitse muiden raidevalikoimien tai Metro Track Set:n poistamista, tai Metro Track Set:n parametrien muuttamista korvaamaan yksiraiteinen ja/tai maglev.
+str_some_disabled       :Ei tarpeeksi raidetyyppipaikkoja. Olet ladannut yhden tai useamman raidevalikoiman, joka tai jotka eivät jätä tarpeeksi paikkoja Metro Track Set:lle. Yksi tai useampit raidetyyppi ei ole saatavilla. Harkitse muiden raidevalikoimien tai Metro Track Set:n poistamista, tai Metro TRack Set:n parametrien muuttamista korvaamaan yksiraiteinen ja/tai maglev.
+
+str_param_gui_name              :Käyttöliittymän tyyli
+str_param_gui_desc              :Valitse tämän valikoiman mukana tulleiden painikkeiden ja osoittimien tyyli.
+str_param_opengfx               :OpenGFX
+str_param_ttd                   :TTD
+
+str_param_terrain_name          :Maasto- ja raidetyylit
+str_param_terrain_desc          :Valitse tämän valikoiman mukana tulleen maaston ja raiteiden tyyli. Automaattinen asetus käyttää samaa arvoa kuin yllä oleva käyttöliittymäasetus, tai Japan Set -maisemaa, jos se on ladattu.
+str_param_auto                  :Automaattinen (oletus)
+str_param_japanset              :Japan Set -maisema
+
+str_param_extrasnow_name        :Erityisen lumiset raiteet
+str_param_extrasnow_desc        :Salli (oletus) tai estä erityisen lumiset raiteet. Sallittaessa vain raiteet näkyvät, ja ratapölkyt, sepellys sekä veturitallit ovat lumenpeitossa.
+
+str_param_levelcrossings_name   :Tasoristeykset
+str_param_levelcrossings_desc   :Salli tai estä (oletus) tasoristeysten rakentaminen metroraiteilla. Tämä pätee vain metroraiteisiin johtimilla ja ilman. "Maanalaiset" metroraiteet eivät koskaan salli tasoristeysten rakentamisen.
+
+str_param_customsignals_name    :Mukautetut opasteet
+str_param_customsignals_desc    :Salli (oletus) tai estä mukautetut opastimet metroraiteille.
+
+str_param_otherengines_name     :Salli muut junat metroraiteilla
+str_param_otherengines_desc     :Valitse, mitkä muut junatyypit (raidetyyppien mukaan) sallitaan metroraiteille. Junat saavat voimaa vain, jos yhteensopiva voimanlähde on valituissa metroraiteissa. Tämä ominaisuus toimii vain alkuperäisillä ja tuetuilla raidevalikoimilla. Tällä hetkellä tuetut: Dutch Tracks.
+str_param_otherengines_off      :Pois päältä (oletus)
+str_param_otherengines_RAIL     :Vain sähköistämätön
+str_param_otherengines_ELRL     :Vain sähköistetyt
+str_param_otherengines_RAILELRL :Sekä sähköistetty että sähköistämätön
+
+str_param_metro_name            :Metroraiteet
+str_param_metro_desc            :Sallii metroraiteiden estämisen tai korvaa yksiraiteinen/maglev sen sijaan, että metroraiteet lisättäisiin erillisenä raidetyyppinä.{}Huom. Jos raidetyyppi on asetettu saataville mutta ei ilmesty rakennusvalikkoon, sinulla ei ole sopivaa kulkuneuvovalikoimaa ladattuna.
+str_param_metro_off             :Pois päältä
+str_param_metro_separate_default:Lisäraidetyyppi (oletus)
+str_param_metro_replacemono     :Korvaa yksiraiteinen
+str_param_metro_replacemglv     :Korvaa maglev
+
+str_param_metrowithcatenary_name:Metroraiteet johtimilla
+str_param_metrowithcatenary_desc:Salli tai estä metroraiteet johtimilla, tai korvaa yksiraiteinen/maglev niillä sen sijaan, että ne lisättäisiin erillisenä raidetyyppinä.
+
+str_param_metrounderground_name :Maanalaiset metroraiteet
+str_param_metrounderground_desc :Salli tai estä maanalaiset metroraiteet. Maanalaiset metroraiteet ovat metroraiteet johtimilla, mutta niiden päälle on laitettu maastosta tehty katto.
+
+str_param_metroconcrete_name    :Maanalaiset kaupunkimetroraiteet
+str_param_metroconcrete_desc    :Salli tai estä maanalaiset kaupunkimetroraiteet. Maanalaiset kaupunkimetroraiteet ovat metroraiteet johtimilla, mutta niiden päälle on laitettu betonikatto.
+
+#metro track strings
+str_metrotrack_name                             :Metroraiteet
+str_metrotrack_toolbar_caption                  :Metroraiteiden rakentaminen
+str_metrotrack_menu_text                        :Metroraiteiden rakentaminen
+str_metrotrack_build_window_caption             :Uudet metrokulkuneuvot
+str_metrotrack_autoreplace_text                 :Metrokulkuneuvot
+str_metrotrack_new_engine_text                  :metro
+
+str_metrowithcatenarytrack_name                 :Metroraiteet johtimilla
+str_metrowithcatenarytrack_toolbar_caption      :Metroraiteiden johtimilla rakentaminen
+str_metrowithcatenarytrack_menu_text            :Metroraiteiden johtimilla rakentaminen
+str_metrowithcatenarytrack_build_window_caption :Uudet metro johtimilla kulkuneuvot
+str_metrowithcatenarytrack_autoreplace_text     :Metro johtimilla kulkuneuvot
+str_metrowithcatenarytrack_new_engine_text      :metro johtimilla
+
+str_metroundergroundtrack_name                  :Maanalaiset metroraiteet
+str_metroundergroundtrack_toolbar_caption       :Maanalaisten metroraiteiden rakentaminen
+str_metroundergroundtrack_menu_text             :Maanalaisten metroraiteiden rakentaminen
+str_metroundergroundtrack_build_window_caption  :Uudet maanalaiset metrokulkuneuvot
+str_metroundergroundtrack_autoreplace_text      :Maanalaiset metrokulkuneuvot
+str_metroundergroundtrack_new_engine_text       :maanalainen metro
+
+str_metroconcretetrack_name                     :Maanalaiset kaupunkimetroraiteet
+str_metroconcretetrack_toolbar_caption          :Maanalaisten kaupunkimetroraiteiden rakentaminen
+str_metroconcretetrack_menu_text                :Maanalaisten kaupunkimetroraiteiden rakentaminen
+str_metroconcretetrack_build_window_caption     :Uudet maanalaiset kaupunkimetrokulkuneuvot
+str_metroconcretetrack_autoreplace_text         :Maanalaiset kaupunkimetrokulkuneuvot
+str_metroconcretetrack_new_engine_text          :maanalainen kaupunkimetro

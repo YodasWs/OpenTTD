@@ -1,0 +1,85 @@
+##grflangid 0x15
+##plural 10
+##gender fp map f mnp m n np
+##case acc nom loc big voc ins dat small gen
+
+#Main grf title and description
+STR_GRF_NAME                    :{TITLE}
+STR_GRF_DESCRIPTION             :{SILVER}Trať metra pro OpenTTD{}{}{BLACK}"Podzemní" trať metra může být zapnuta přes parametr.{}{}License: GPLv2 nebo vyšší.{}Přečti si  readme pro detaily.
+STR_GRF_URL             :http://www.tt-forums.net/viewtopic.php?t=49476
+
+str_low_version         :Tvá verze OpenTTd je zastaralá. Upgraduj ji , abys mohl využívat všech výhod tohoto NewGRF.
+str_no_railtypes_enabled:Všechny typy železnic jsou vypnuty. Nemá smysl načíst tuto sadu, pokud zakážete všechny typy drah. Ověřte nastavení parametrů nebo odeberte Metro Track Set z konfigurace NewGRF.
+str_no_free_slots       :Nejsou volné sloty pro železniční trať. Nainstalovali jste jednu nebo více dalších sad tratí, které používají všechny sloty železnice. Zvažte odstranění jiných sad tratí, změňte parametry Metro Track Set, abyste nahradili monorail a / nebo maglev, nebo odeberte Metro Track Set.
+str_some_disabled       :Nedostatek slotů pro typy železnic. Nainstalovali jste jednu nebo více dalších sad tratí, které nezanechávají dostatek slotů pro  Metro Track Set. Jeden nebo více typů kolejí této sady není k dispozici.  Zvažte odstranění jiných sad tratí, změňte parametry Metro Track Set, abyste nahradili monorail a / nebo maglev, nebo odeberte Metro Track Set.
+
+str_param_gui_name              :Styl rozhraní
+str_param_gui_desc              :Vyber styl tlačítek a kurzorů  poskytovaných tímto nastavením.
+str_param_opengfx               :OpenGFX
+str_param_ttd                   :TTD
+
+str_param_terrain_name          :Terén a styl tratě
+str_param_terrain_desc          :Vyber styl terénu a tratě poskytovaných touto sadou. Automatické nastavení bude používat stejné hodnoty jako styl nastavení rozhraní výše nebo japonskou krajinovou sadu, když je nahrána.
+str_param_auto                  :Automaticky (defaultně)
+str_param_japanset              :Japonské nastavení krajiny
+
+str_param_extrasnow_name        :Extra tratě do sněhu
+str_param_extrasnow_desc        :Zapíná (defaultně) nebo vypíná extra tratě do sněhu. Když je to zapnuto , jenom železnice a ne pražce a štěrk  se ukazují na sněžném terénu a depa budou pokrytá sněhem.
+
+str_param_levelcrossings_name   :Úrovňová křížení
+str_param_levelcrossings_desc   :Povol nebo nepovol (defaultně) konstrukci křížení tratí metra. To je použitelné jenom pro běžnou trať metra a trať metra s trolejovým vedením. "Podzemní" typ trati metra nikdy nepovolí konstrukci křížení.
+
+str_param_customsignals_name    :Vlastní signály
+str_param_customsignals_desc    :Zapni (defaultně) nebo vypni vlastní signály pro metro tratě.
+
+str_param_otherengines_name     :Povol odlišné vlaky na tratích metra
+str_param_otherengines_desc     :Vyber, který druh vlaků (podle typu železnice) povolíš na tratích metra.Vlaky budou poháněny jenom kompatibilním zdrojem energie a podporovány traťovými sadami. Momentálně podporováno: Dutch Tracks.
+str_param_otherengines_off      :Vypnuto (defaultně)
+str_param_otherengines_RAIL     :Neelektrifikované železnice jenom
+str_param_otherengines_ELRL     :Elektrické vlaky jenom
+str_param_otherengines_RAILELRL :Obě (ne)elektifikované železnice
+
+str_param_metro_name            :Metro tratě
+str_param_metro_desc            :Povoluje vypnutí tratí metra s trolejovým vedením nebo nahrazuje monorail/maglev místo přidání jako oddělený typ železnice.{}Upozornění: jestliže se typ tratě ukazuje jako dostupný, ale neukazuje se konstrukční menu, znamená to, že nejsou dostupná kompatibilní vozidla.
+str_param_metro_off             :Vypnuto
+str_param_metro_separate_default:Další typ žleznice  (defaultně)
+str_param_metro_replacemono     :Nahraď monorail
+str_param_metro_replacemglv     :Nahraď Maglev
+
+str_param_metrowithcatenary_name:Tratě metra s trolejovým vedením
+str_param_metrowithcatenary_desc:Povoluje vypnutí tratí metra s trolejovým vedením  nebo nahrazuje monorail/maglev místo přidání jako oddělený typ železnice.
+
+str_param_metrounderground_name :Podzemní trať metra
+str_param_metrounderground_desc :Zapíná nebo vypíná podzemní tratě metra. Podzemní tratě metra jsou jako tratě metra s trolejovým vedením, ale s terénní střechou nahoře.
+
+str_param_metroconcrete_name    :Podzemní městská trať metra
+str_param_metroconcrete_desc    :Zapíná nebo vypíná podzemní tratě metra. Podzemní tratě metra jsou jako tratě metra s trolejovým vedením, ale s betonovou střechou nahoře.
+
+#metro track strings
+str_metrotrack_name                             :Metro trať
+str_metrotrack_toolbar_caption                  :Konstrukce tratě metra
+str_metrotrack_menu_text                        :Konstrukce tratě metra
+str_metrotrack_build_window_caption             :Nová vozidla metra
+str_metrotrack_autoreplace_text                 :Metro vozidla
+str_metrotrack_new_engine_text                  :metro
+
+str_metrowithcatenarytrack_name                 :Trať metra s trolejovým vedením
+str_metrowithcatenarytrack_toolbar_caption      :Konstrukce tratě metra s trolejovým vedením
+str_metrowithcatenarytrack_menu_text            :Konstrukce tratě metra s trolejovým vedením
+str_metrowithcatenarytrack_build_window_caption :Nové metro s trolejovými vozidly
+str_metrowithcatenarytrack_autoreplace_text     :Metro s trolejovými vozidly
+str_metrowithcatenarytrack_new_engine_text      :metro s trolejovým vedením
+
+str_metroundergroundtrack_name                  :Podzemní trať metra
+str_metroundergroundtrack_toolbar_caption       :Konstrukce podzemní tratě metra
+str_metroundergroundtrack_menu_text             :Konstrukce podzemní tratě metra
+str_metroundergroundtrack_build_window_caption  :Nová vozidla podzemního metra
+str_metroundergroundtrack_autoreplace_text      :Vozidla podzemního metra
+str_metroundergroundtrack_new_engine_text       :podzemní metro
+
+str_metroconcretetrack_name                     :Podzemní městská trať metra
+str_metroconcretetrack_toolbar_caption          :Konstrukce podzemní městské tratě metra
+str_metroconcretetrack_menu_text                :Konstrukce městské podzemní tratě metra
+str_metroconcretetrack_build_window_caption     :Nové vozidla podzemního městského metra
+str_metroconcretetrack_autoreplace_text         :Podzemní městské vozidla metra
+str_metroconcretetrack_new_engine_text          :podzemní městské metro

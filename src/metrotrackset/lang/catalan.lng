@@ -1,0 +1,84 @@
+##grflangid 0x22
+##plural 0
+##gender Masculin Femenin
+
+#Main grf title and description
+STR_GRF_NAME                    :{TITLE}
+STR_GRF_DESCRIPTION             :{SILVER}Vies de metro per a OpenTTD{}{}{BLACK}La via de metro "subterrània" es pot activar via paràmetre.{}{}Llicència: GPLv2 o superior.{}Veure llegeix-me per a més detalls.
+STR_GRF_URL             :http://www.tt-forums.net/viewtopic.php?t=49476
+
+str_low_version         :La teva versió de l'OpenTTD és antiga. Actualitza-la per a disposar de totes les funcions d'aquest NewGRF.
+str_no_railtypes_enabled:Tots els tipus de vies fèrries desactivats. No té sentit carregar aquest NewGRF si els tipus de vies fèrries estan desactivats. No desactivis les vies fèrries o treu el Joc de Vies de Metro de la teva configuració de NewGRF.
+str_no_free_slots       :No hi ha lloc per a nous tipus de vies. S'han carregat altres NewGRF que proporcionen tipus de vies que empren tot l'espai disponible. Pots provar llevant un d'aquest NewGRF, fer que aquest NewGRF reemplaci els tipus de monorail i/o maglev o bé treure Metro Track Set.
+str_some_disabled       :No hi ha prou lloc per a nous tipus de vies. S'han carregat altres NewGRF que proporcionen tipus de vies que fan que Metro Track Set no disposi d'espai suficient. Almenys un dels tipus de vies que proporciona Metro Track Set no estarà disponible. Pots provar llevant un d'aquests NewGRF, fer que aquest NewGRF reemplaci els tipus de monorail i/o maglev o bé treure Metro Track Set.
+
+str_param_gui_name              :Estil d'interfície
+str_param_gui_desc              :Selecciona l'estil dels botons i cursors que proporciona aquest NewGRF.
+str_param_opengfx               :OpenGFX
+str_param_ttd                   :TTD
+
+str_param_terrain_name          :Terreny i estil de via
+str_param_terrain_desc          :Selecciona l'estil de terreny i de vies que proporciona aquest NewGRF. L'opció automàtica emprarà el mateix valor que l'estil d'interfície anterior; també usarà els gràfics de terreny japonès quan se'n carregui el NewGRF corresponent.
+str_param_auto                  :Automàtic (per defecte)
+str_param_japanset              :Terreny del Conjunt de Gràfics Japonès
+
+str_param_extrasnow_name        :Vies nevades alternatives
+str_param_extrasnow_desc        :Activar (per defecte) o desactivar vies nevades alternatives. Quan s'activa, només es mostren el rail i el balast (les travesses no) en terreny nevat i els dipòsits es cobreixen de neu.
+
+str_param_levelcrossings_name   :Passos a nivell
+str_param_levelcrossings_desc   :Activar o desactivar (per defecte) la construcció de passos a nivell en vies de metro. Això només s'aplica a la via de metro regular i a la via de metro amb catenària. Els tipus de via de metro "subterrani" no permeten mai de construir passos a nivell.
+
+str_param_customsignals_name    :Senyals específiques
+str_param_customsignals_desc    :Activar (per defecte) o desactivar les senyals específiques per a tipus de vies de metro.
+
+str_param_otherengines_name     :Permetre altres trens en vies de metro
+str_param_otherengines_desc     :Selecciona quins tipus de tren (per tipus de via) circularan per les vies de metro. Els trens només podran circular-hi si hi ha un sistema d'alimentació compatible en la via de metro que escullis. Aquesta característica només funciona correctament per als conjunts de vies per defecte i també per a les que inclou el NewGRF Vies Holandeses (Dutch Tracks).
+str_param_otherengines_off      :Apagat (per defecte)
+str_param_otherengines_RAIL     :Només via de ferrocarril no electrificada
+str_param_otherengines_ELRL     :Només via de ferrocarril electrificada
+str_param_otherengines_RAILELRL :Ambdós ferrocarrils (normal i electrificat)
+
+str_param_metro_name            :Vies de metro
+str_param_metro_desc            :Permet desactivar les vies de metro o fer que reemplacin el monorail/maglev en lloc d'afegir-les com a un tipus de via addicional.{}Nota: si s'escull que el tipus de via sigui disponible però no es mostra en el menú de construcció, això significa que no hi ha un conjunt de vehicles adequat carregat.
+str_param_metro_off             :Desactivada
+str_param_metro_separate_default:Tipus de via addicional (per defecte)
+str_param_metro_replacemono     :Reemplaça monorail
+str_param_metro_replacemglv     :Reemplaça maglev
+
+str_param_metrowithcatenary_name:Vies de metro amb catenària
+str_param_metrowithcatenary_desc:Permet desactivar les vies de metro amb catenària o fer que reemplacin el monorail/maglev en lloc d'afegir-les com a un tipus de via addicional.
+
+str_param_metrounderground_name :Via de metro subterrània
+str_param_metrounderground_desc :Activa o desactiva les vies de metro subterrànies. Les vies de metro subterrànies són com les vies de metro amb catenàries, però amb una coberta amb la mateixa aparença que el terreny del clima.
+
+str_param_metroconcrete_name    :Via de metro urbana subterrània
+str_param_metroconcrete_desc    :Activa o desactiva les vies de metro urbanes subterrànies. Les vies de metro urbanes subterrànies són com les vies de metro amb catenàries, però amb una coberta de formigó.
+
+#metro track strings
+str_metrotrack_name                             :Via de Metro
+str_metrotrack_toolbar_caption                  :Construcció de Via de Metro
+str_metrotrack_menu_text                        :Construcció de via de metro
+str_metrotrack_build_window_caption             :Nous Vehicles de Metro
+str_metrotrack_autoreplace_text                 :Vehicles de Metro
+str_metrotrack_new_engine_text                  :metro
+
+str_metrowithcatenarytrack_name                 :Via de Metro amb Catenària
+str_metrowithcatenarytrack_toolbar_caption      :Construcció de Via de Metro amb Catenària
+str_metrowithcatenarytrack_menu_text            :Construcció de via de metro amb catenària
+str_metrowithcatenarytrack_build_window_caption :Metro Nou amb Vehicles amb Catenària
+str_metrowithcatenarytrack_autoreplace_text     :Vehicles de Metro amb Catenària
+str_metrowithcatenarytrack_new_engine_text      :metro amb catenària
+
+str_metroundergroundtrack_name                  :Via de Metro Subterrània
+str_metroundergroundtrack_toolbar_caption       :Construcció de Via de Metro Subterrània
+str_metroundergroundtrack_menu_text             :Construcció de via de metro subterrània
+str_metroundergroundtrack_build_window_caption  :Nous Vehicles de Metro Subterrani
+str_metroundergroundtrack_autoreplace_text      :Vehicles de Metro Subterrani
+str_metroundergroundtrack_new_engine_text       :metro subterrrani
+
+str_metroconcretetrack_name                     :Via de Metro Urbana Subterrània
+str_metroconcretetrack_toolbar_caption          :Construcció de Via de Metro Urbana Subterrània
+str_metroconcretetrack_menu_text                :Construcció de via de metro urbana subterrània
+str_metroconcretetrack_build_window_caption     :Nous Vehicles de Metro Urbans Subterranis
+str_metroconcretetrack_autoreplace_text         :Vehicles de Metro Urbà Subterrani
+str_metroconcretetrack_new_engine_text          :metro urbà subterrani

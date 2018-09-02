@@ -1,0 +1,51 @@
+##grflangid 0x02
+##plural 0
+##gender m w n p
+
+#Main grf title and description
+STR_GRF_NAME                    :{TITLE}
+STR_GRF_DESCRIPTION             :{SILVER}Metro-Schienen OpenTTD{}{}{BLACK}"U-Bahn"-Schienen können per Parameter aktiviert werden.{}{}Licenz: GPLv2 oder höher.{}Siehe Readme für Details
+STR_GRF_URL             :http://www.tt-forums.net/viewtopic.php?t=49476
+
+str_low_version         :Diese OpenTTD-Version ist veraltet. Bitte update es, um alle Features dieses NewGRFs nutzen zu können
+str_no_railtypes_enabled:Alle Railtypes abgeschaltet. Es ist sinnlos, dieses NewGRF zu laden, wenn Railtypes abgeschaltet sind. Überprüfe die Parameter oder entferne Metro Track Set von der NewGRF-Liste
+
+str_param_ttd                   :TTD
+
+str_param_terrain_name          :Landschafts- und Schienentyp
+str_param_terrain_desc          :Wähle die Art der Landschaft und der Schienen dieses Sets. 'auto' nutzt die gleichen Einstellungen wie die Interface-Einstellungen oben - oder Japanische Landschaft, wenn die auch geladen ist.
+str_param_auto                  :Auto (standard)
+str_param_japanset              :Japan-Set Landschaft
+
+str_param_extrasnow_name        :Extra-verschneite Gleise
+
+str_param_levelcrossings_name   :Bahnübergänge
+
+str_param_customsignals_desc    :Aktiviere (standard) oder deaktiviere die eigenen Signale für das Metrogleis.
+
+str_param_otherengines_name     :Erlaube andere Züge auf Metro-Gleisen
+str_param_otherengines_RAIL     :nur nichtelektrifizierte Gleise
+
+str_param_metro_name            :Metro-Gleise
+str_param_metro_off             :Deaktiviert
+str_param_metro_replacemono     :ersetze die Einschienenbahn
+
+
+str_param_metrounderground_name :U-Bahn-Gleis
+
+
+#metro track strings
+str_metrotrack_menu_text                        :Bau von Metro-Gleisen
+str_metrotrack_build_window_caption             :Neue Metro-Fahrzeuge
+str_metrotrack_autoreplace_text                 :Fahrzeuge Metro
+
+str_metrowithcatenarytrack_name                 :Metro-Schienen mit Elektrifizierung
+str_metrowithcatenarytrack_toolbar_caption      :Bau von Metro-Schienen mit Elektrifizierung
+str_metrowithcatenarytrack_build_window_caption :Fahrzeuge für Metro-Schienen mit Elektrifizierung
+str_metrowithcatenarytrack_new_engine_text      :Metro mit Oberleitung
+
+str_metroundergroundtrack_name                  :U-Bahn-Gleise
+str_metroundergroundtrack_autoreplace_text      :Fahrzeuge U-Bahn
+str_metroundergroundtrack_new_engine_text       :U-Bahn-Zug
+
+str_metroconcretetrack_autoreplace_text         :Fahrzeuge städtischer U-Bahn

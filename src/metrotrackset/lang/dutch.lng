@@ -1,0 +1,83 @@
+##grflangid 0x1f
+##plural 0
+
+#Main grf title and description
+STR_GRF_NAME                    :{TITLE}
+STR_GRF_DESCRIPTION             :{SILVER}Metrosporen voor OpenTTD{}{}{BLACK}"Ondergronds" metrospoor kan worden ingeschakeld via parameter.{}{}Licentie: GPLv2 of hoger.{}Zie readme voor details.
+STR_GRF_URL             :http://www.tt-forums.net/viewtopic.php?t=49476
+
+str_low_version         :Je OpenTTD is verouderd. Werk bij om alle mogelijkheden van deze NewGRF te kunnen gebruiken.
+str_no_railtypes_enabled:Alle spoortypen uitgeschakeld. Het heeft niet veel nut om deze set te laden als je alle spoortypen ervan uitschakelt. Controleer de parameterinstellingen of verwijder Metro Track Set van de NewGRF configuratie.
+str_no_free_slots       :Geen vrije railtype posities. Je hebt een of meer andere spoorsets geladen die alle railtype posities innemen. Overweeg om andere spoorsets te verwijderen, Metro Track Set parameterinstellingen te wijzigen om monorail of maglev te vervangen, of Metro Track Set te verwijderen.
+str_some_disabled       :Niet genoeg railtype posities. Je hebt een of meer andere spoorsets geladen die niet genoeg ruimte over laten voor Metro Track Set. Een of meerdere spoortypen van deze set zijn niet beschikbaar. Overweeg om andere spoorsets te verwijderen, Metro Track Set parameterinstellingen te wijzigen om monorail of maglev te vervangen, of Metro Track Set te verwijderen.
+
+str_param_gui_name              :Interfacestijl
+str_param_gui_desc              :Selecteer de stijl van knoppen en muisaanwijzers die worden voorzien door deze set.
+str_param_opengfx               :OpenGFX
+str_param_ttd                   :TTD
+
+str_param_terrain_name          :Terrein en spoorstijl
+str_param_terrain_desc          :Selecteer de stijl van het terrein en spoor voorzien door deze set. De auto-instelling gebruikt dezelfde waarde als voor de interfacestijl hierboven, of Japan Set Landscape wanneer deze geladen is.
+str_param_auto                  :Auto (standaard)
+str_param_japanset              :Japan Set Landscape
+
+str_param_extrasnow_name        :Extra besneeuwde sporen
+str_param_extrasnow_desc        :Schakelt extra besneeuwde sporen in (standaard) of uit. Wanneer ingeschakeld wordt op besneeuwd terrein alleen spoorstaven en geen dwarsliggers of ballast getoond. Tevens zullen depots voorzien zijn van een laag sneeuw.
+
+str_param_levelcrossings_name   :Spoorwegovergangen
+str_param_levelcrossings_desc   :Sta toe of verbied (standaard) het bouwen van spoorwegovergangen in metrosporen. Dit is alleen van toepassing op normaal metrospoor en metrospoor met bovenleiding. De "ondergrondse" metrospoortypen staan nooit spoorwegovergangen toe.
+
+str_param_customsignals_name    :Aangepaste seinen
+str_param_customsignals_desc    :Schakel aangepaste seinen voor metrospoortypen in (standaard) of uit.
+
+str_param_otherengines_name     :Laat andere treinen op metrospoor toe
+str_param_otherengines_desc     :Selecteer welke andere typen treinen (op basis van spoortype) toegelaten moeten worden op metrosporen. Locomotieven kunnen alleen rijden als er een geschikte energiebron aanwezig is. Deze optie werkt alleen correct voor standaardsporen en ondersteunde spoorsets. Op dit moment ondersteund: Dutch Tracks.
+str_param_otherengines_off      :Uit (standaard)
+str_param_otherengines_RAIL     :Alleen niet-geëlectrificeerd
+str_param_otherengines_ELRL     :Alleen geëlectrificeerd
+str_param_otherengines_RAILELRL :(Niet-)geëlectrificeerd allebei
+
+str_param_metro_name            :Metrosporen
+str_param_metro_desc            :Maakt het mogelijk om metrosporen uit te schakelen of vervang monorail/maglev door metrosporen in plaats van ze toe te voegen als extra spoortype.{}Opmerking: als metrosporen volgens de instelling beschikbaar zouden moeten zijn, maar ze staan niet in het spoorwegmenu, dan betekent dit dat je geen geschikte treinset hebt geladen.
+str_param_metro_off             :Uitgeschakeld
+str_param_metro_separate_default:Extra spoortype (standaard)
+str_param_metro_replacemono     :Vervang monorail
+str_param_metro_replacemglv     :Vervang maglev
+
+str_param_metrowithcatenary_name:Metrosporen met bovenleiding
+str_param_metrowithcatenary_desc:Maakt het mogelijk om metrosporen met bovenleiding uit te schakelen of vervang monorail/maglev door metrosporen met bovenleiding in plaats van ze toe te voegen als extra spoortype.
+
+str_param_metrounderground_name :Ondergrondse metrosporen
+str_param_metrounderground_desc :Schakel ondergrondse metrosporen in of uit. Ondergrondse metrosporen zijn zoals metrosporen met bovenleiding, maar met een terreindak erboven.
+
+str_param_metroconcrete_name    :Ondergrondse stedelijke metrosporen
+str_param_metroconcrete_desc    :Schakel ondergrondse stedelijke metrosporen in of uit. Ondergrondse stedelijke metrosporen zijn zoals metrosporen met bovenleiding, maar met een betonnen dak erboven.
+
+#metro track strings
+str_metrotrack_name                             :Metrosporen
+str_metrotrack_toolbar_caption                  :Bouw metrosporen
+str_metrotrack_menu_text                        :Bouw metrosporen
+str_metrotrack_build_window_caption             :Nieuwe metrovoertuigen
+str_metrotrack_autoreplace_text                 :Metrovoertuigen
+str_metrotrack_new_engine_text                  :metrovoertuig
+
+str_metrowithcatenarytrack_name                 :Metrosporen met bovenleiding
+str_metrowithcatenarytrack_toolbar_caption      :Bouw metrosporen met bovenleiding
+str_metrowithcatenarytrack_menu_text            :Bouw metrosporen met bovenleiding
+str_metrowithcatenarytrack_build_window_caption :Nieuwe metrovoertuigen met bovenleiding
+str_metrowithcatenarytrack_autoreplace_text     :Metrovoertuigen met bovenleiding
+str_metrowithcatenarytrack_new_engine_text      :metrovoertuig met bovenleiding
+
+str_metroundergroundtrack_name                  :Ondergrondse metrosporen
+str_metroundergroundtrack_toolbar_caption       :Bouw ondergrondse metrosporen
+str_metroundergroundtrack_menu_text             :Bouw ondergrondse metrosporen
+str_metroundergroundtrack_build_window_caption  :Nieuwe ondergrondse metrovoertuigen
+str_metroundergroundtrack_autoreplace_text      :Ondergrondse metrovoertuigen
+str_metroundergroundtrack_new_engine_text       :ondergronds metrovoertuig
+
+str_metroconcretetrack_name                     :Ondergrondse stedelijke metrosporen
+str_metroconcretetrack_toolbar_caption          :Bouw ondergrondse stedelijke metrosporen
+str_metroconcretetrack_menu_text                :Bouw ondergrondse stedelijke metrosporen
+str_metroconcretetrack_build_window_caption     :Nieuwe ondergrondse stedelijke metrovoertuigen
+str_metroconcretetrack_autoreplace_text         :Ondergrondse stedelijke metrovoertuigen
+str_metroconcretetrack_new_engine_text          :ondergronds stedelijk metrovoertuig

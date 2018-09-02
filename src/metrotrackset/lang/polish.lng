@@ -1,0 +1,41 @@
+##grflangid 0x30
+##plural 7
+##gender n m f
+##case c b d m n w
+
+#Main grf title and description
+STR_GRF_NAME                    :{TITLE}
+STR_GRF_DESCRIPTION             :{SILVER}Tory metra dla OpenTTD{}{}{BLACK}"Podziemne" tory metra uaktywnianie przez paramertr newgrf.{}{}Licencja: GPLv2 lub wyższa.{}Szczegóły w readme.
+
+
+str_param_ttd                   :TTD
+
+
+
+str_param_levelcrossings_desc   :Włącza lub wyłącza (default) możliwość budowy przejazdów drogowych. Opcja dotyczy jedynie torów metra i torów metra z siecią trakcyjną. "Podziemny" tor metra zawsze nie dopuszcza do budowy przejazdów.
+
+str_param_customsignals_name    :Sygnalizatory typowe dla metra
+str_param_customsignals_desc    :Włącza (default) lub wyłącza budowanie sygnalizatorów typowych dla metra
+
+str_param_otherengines_RAIL     :Tylko tor bez napowietrznej sieci trakcyjnej
+
+
+
+
+
+#metro track strings
+str_metrotrack_name                             :Tory metra
+str_metrotrack_toolbar_caption                  :Budowa torów metra
+str_metrotrack_menu_text                        :Budowa torów metra
+str_metrotrack_autoreplace_text                 :Pojazdy metra
+str_metrotrack_new_engine_text                  :metro
+
+
+str_metroundergroundtrack_name                  :Podziemny tor metra
+str_metroundergroundtrack_toolbar_caption       :Budowa torów podziemnego metra
+str_metroundergroundtrack_build_window_caption  :Nowe pojazdy metra
+
+str_metroconcretetrack_name                     :Podziemny tor metra miejskiego
+str_metroconcretetrack_toolbar_caption          :Budowa torów metra miejskiego
+str_metroconcretetrack_menu_text                :Budowa podziemnego toru miejskiego metra
+str_metroconcretetrack_new_engine_text          :podziemne metro miejskie

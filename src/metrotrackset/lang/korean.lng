@@ -1,0 +1,84 @@
+##grflangid 0x3a
+##plural 11
+##gender m f
+
+#Main grf title and description
+STR_GRF_NAME                    :{TITLE}
+STR_GRF_DESCRIPTION             :{SILVER}OpenTTD 를 위한 도시철도 선로 세트{}{}{BLACK}"지하" 도시철도 선로는 파라미터 설정에서 사용 여부를 선택할 수 있음.{}{}라이선스: GPL 버전 2 이상.{}자세한 사항은 README를 참조 바랍니다..
+STR_GRF_URL             :http://www.tt-forums.net/viewtopic.php?t=49476
+
+str_low_version         :새로운 버전의 OpenTTD가 출시되었습니다. 이 newGRF의 모든 기능을 즐기기 위해서는 OpenTTD를 업데이트 해주세요.
+str_no_railtypes_enabled:모든 철도 선로가 사용하지 않도록 설정되어 있습니다. 사용 가능한 모든 종류의 선로를 비활성화할 경우 이 GRF는 동작하지 않습니다. 매개 변수 설정을 바꾸거나 Metro Track Set을 newGRF설정에서 비활성화 하십시오.
+str_no_free_slots       :사용 가능한 선로 종류의 슬롯이 없습니다. 당신은 선로 슬롯을 모두 사용하는 한 가지 이상의 선로 GRF 세트를 이미 사용중입니다. 다른 선로 GRF 세트를 제거하거나 이 GRF 세트를 제거하십시오. 또는 이 GRF의 매개 변수에서 모노레일 혹은 자기부상 선로를 대체하도록 설정하십시오.
+str_some_disabled       :사용 가능한 선로 종류의 슬롯이 없습니다. 당신은 선로 슬롯을 모두 사용하는 한 가지 이상의 선로 GRF 세트를 이미 사용중입니다. 다른 선로 GRF 세트를 제거하거나 이 GRF 세트를 제거하십시오. 또는 이 GRF의 매개 변수에서 모노레일 혹은 자기부상 선로를 대체하도록 설정하십시오.
+
+str_param_gui_name              :인터페이스 스타일
+str_param_gui_desc              :이 세트가 제공하는 버튼과 커서의 스타일을 설정합니다.
+str_param_opengfx               :OpenGFX
+str_param_ttd                   :TTD
+
+str_param_terrain_name          :지형과 선로 형태
+str_param_terrain_desc          :이 세트가 제공하는 지형과 선로의 스타일을 설정합니다. 자동 설정은 상단의 인터페이스 스타일 설정과 동일한 설정으로 자동적으로 동기화되거나, 일본 지형 세트가 로드되었을 때에는 그것을 이용할 것입니다.
+str_param_auto                  :자동 (기본값)
+str_param_japanset              :일본 지형 세트
+
+str_param_extrasnow_name        :추가적인 눈이 있는 선로
+str_param_extrasnow_desc        :추가적인 눈이 있는 선로의 사용 여부를 설정합니다. 이 설정을 사용하게 되면 눈 지형에서는 차량기지가 눈에 뒤덮인 모습으로 나타날 것이며, 침목과 선로 분기기는 가려지고 선로만 보이게 될 것입니다.
+
+str_param_levelcrossings_name   :입체 교차
+str_param_levelcrossings_desc   :도시철도 선로에서 입체 교차의 사용여부를 설정합니다.(기본 설정은 비허용입니다) 이는 기존 도시철도 선로와 가선이 있는 도시철도 선로에만 적용됩니다. "지하" 도시철도 선로에서는 항상 입체교차의 사용이 불가능합니다.
+
+str_param_customsignals_name    :사용자 설정 신호기
+str_param_customsignals_desc    :도시철도 선로 차량을 위해서 전용 신호기를 사용 가능(기본값) 혹은 사용 불가하게 설정합니다.
+
+str_param_otherengines_name     :도시철도 선로에 다른 철도 차량의 진입을 허용
+str_param_otherengines_desc     :도시철도 선로에서 어떤 종류의 철도 차량이 진입할 수 있도록 할지 설정합니다. 차량들은 도시철도 선로와 호환 가능한 전력원이 있을 때만 진입할 수 있을 것입니다. 이 기능은 기본 철도 차량과 지원 가능한 선로 GRF세트와만 올바르게 동작합니다.현재 지원 가능: 네덜란드 선로 세트
+str_param_otherengines_off      :사용 안 함 (기본값)
+str_param_otherengines_RAIL     :비전철화 선로 전용
+str_param_otherengines_ELRL     :전철화 선로 전용
+str_param_otherengines_RAILELRL :모두 (비)전철화 선로
+
+str_param_metro_name            :도시철도 선로
+str_param_metro_desc            :새로운 선로를 추가하는 대신 지하철 선로를 사용하지 않거나 모노레일/자기부상열차 선로를 대체하게 합니다.{}주의: 선로 설정이 가능하다고 나오지만 건설 메뉴에서 뜨지 않을 경우 올바른 열차 grf가 로딩되지 않은 것 일수 있습니다.
+str_param_metro_off             :사용안 함
+str_param_metro_separate_default:추가적인 선로 종류 (기본값)
+str_param_metro_replacemono     :모노레일을 대체
+str_param_metro_replacemglv     :자기부상열차를 대체
+
+str_param_metrowithcatenary_name:가선이 있는 도시철도 선로
+str_param_metrowithcatenary_desc:새로운 선로를 추가하는 대신 지하철 선로를 사용하지 않거나 모노레일/자기부상열차 선로를 대체하게 합니다.
+
+str_param_metrounderground_name :지하 도시철도 차량
+str_param_metrounderground_desc :지하 광역 도시철도 선로의 사용 여부를 설정합니다. 지하 광역 도시철도 선로는 가선이 있는 도시철도 선로와 비슷하지만, 지붕으로 지형 구조물이 있습니다.
+
+str_param_metroconcrete_name    :지하 광역 도시철도 차량
+str_param_metroconcrete_desc    :지하 광역철도 선로의 사용 여부를 설정합니다. 지하 광역 철도 선로는 가선이 있는 도시철도 선로와 비슷하지만, 추가적으로 콘크리트 지붕 구조물이 있습니다.
+
+#metro track strings
+str_metrotrack_name                             :도시철도 선로
+str_metrotrack_toolbar_caption                  :도시철도 선로 건설
+str_metrotrack_menu_text                        :도시철도 선로 건설
+str_metrotrack_build_window_caption             :새로운 도시철도 차량
+str_metrotrack_autoreplace_text                 :도시철도 차량
+str_metrotrack_new_engine_text                  :도시철도
+
+str_metrowithcatenarytrack_name                 :가선이 있는 도시철도 선로
+str_metrowithcatenarytrack_toolbar_caption      :가선이 있는 도시철도 선로 건설
+str_metrowithcatenarytrack_menu_text            :가선이 있는 도시철도 선로 건설
+str_metrowithcatenarytrack_build_window_caption :가선이 있는 새로운 도시철도 차량
+str_metrowithcatenarytrack_autoreplace_text     :가선이 있는 도시철도 차량
+str_metrowithcatenarytrack_new_engine_text      :가선이 있는 도시철도
+
+str_metroundergroundtrack_name                  :지하 도시철도 선로
+str_metroundergroundtrack_toolbar_caption       :지하 도시철도 선로 건설
+str_metroundergroundtrack_menu_text             :지하 도시철도 선로 건설
+str_metroundergroundtrack_build_window_caption  :새로운 지하 도시철도 차량
+str_metroundergroundtrack_autoreplace_text      :지하 도시철도 차량
+str_metroundergroundtrack_new_engine_text       :지하 도시철도
+
+str_metroconcretetrack_name                     :지하 광역 도시철도 선로
+str_metroconcretetrack_toolbar_caption          :지하 광역 도시철도 선로 건설
+str_metroconcretetrack_menu_text                :지하 광역 도시철도 선로 건설
+str_metroconcretetrack_build_window_caption     :새로운 지하 광역 도시철도 차량
+str_metroconcretetrack_autoreplace_text         :지하 광역 도시철도 차량
+str_metroconcretetrack_new_engine_text          :지하 광역 도시철도

@@ -1,0 +1,82 @@
+﻿##grflangid 0x01
+
+#Main grf title and description
+STR_GRF_NAME			:{TITLE}
+STR_GRF_DESCRIPTION		:{SILVER}Metro Tracks for OpenTTD {}{}{BLACK}"Underground" metro track can be enabled via parameter.{}{}License: GPLv2 or higher. {}See readme for details.
+STR_GRF_URL             :http://www.tt-forums.net/viewtopic.php?t=49476
+
+str_low_version         :Your OpenTTD is outdated. Upgrade it to enjoy all features of this NewGRF.
+str_no_railtypes_enabled:All railtypes disabled. It doesn't make sense to load this set if you disable all its railtypes. Review the parameter settings or remove Metro Track Set from the NewGRF configuration.
+str_no_free_slots       :No free railtype slots. You've loaded one or more other track sets that use all railtype slots. Consider removing other track sets, change Metro Track Set parameters to replace monorail and/or maglev, or remove Metro Track Set.
+str_some_disabled       :Not enough railtype slots. You've loaded one or more other track sets that don't leave enough railtype slots for Metro Track Set. One or more railtypes of this set are not available. Consider removing other track sets, change Metro Track Set parameters to replace monorail and/or maglev, or remove Metro Track Set.
+
+str_param_gui_name              :Interface style
+str_param_gui_desc              :Select style of the buttons and cursors provided by this set.
+str_param_opengfx               :OpenGFX
+str_param_ttd                   :TTD
+
+str_param_terrain_name          :Terrain and track style
+str_param_terrain_desc          :Select style of the terrain and tracks provided by this set. The auto setting will use the same value as the interface style setting above, or Japan Set Landscape when loaded.
+str_param_auto                  :Auto (default)
+str_param_japanset              :Japan Set Landscape
+
+str_param_extrasnow_name        :Extra snowy tracks
+str_param_extrasnow_desc        :Enable (default) or disable extra snowy tracks. When enabled, only rail and no sleepers and ballast are shown on snow terrain and depots will be covered in snow.
+
+str_param_levelcrossings_name   :Level crossings
+str_param_levelcrossings_desc   :Allow or disallow (default) construction of level crossings with metro track. This only applies to regular metro track and metro track with catenary. The "underground" metro track types always disallow construction of level crossings.
+
+str_param_customsignals_name    :Custom signals
+str_param_customsignals_desc    :Enable (default) or disable custom signals for metro track types.
+
+str_param_otherengines_name     :Allow other trains on metro tracks
+str_param_otherengines_desc     :Select what other train types (by railtype) to allow on metro tracks. Trains will only be powered if a compatible power source is available on the metro track of choice. This feature only works correctly for default and supported track sets. Currently supported: Dutch Tracks.
+str_param_otherengines_off      :Off (default)
+str_param_otherengines_RAIL     :Unelectrified rail only
+str_param_otherengines_ELRL     :Electrified rail only
+str_param_otherengines_RAILELRL :Both (un)electrified rail
+
+str_param_metro_name            :Metro tracks
+str_param_metro_desc            :Allows to disable metro tracks or have them replace monorail/maglev instead of being added as separate railtype.{}Note: if the track type is set to be available but doesn't show up in the construction menu, this means that you have no suitable vehicle set loaded.
+str_param_metro_off             :Disabled
+str_param_metro_separate_default:Additional railtype (default)
+str_param_metro_replacemono     :Replace monorail
+str_param_metro_replacemglv     :Replace maglev
+
+str_param_metrowithcatenary_name:Metro tracks with catenary
+str_param_metrowithcatenary_desc:Allows to disable metro tracks with catenary or have them replace monorail/maglev instead of being added as separate railtype.
+
+str_param_metrounderground_name :Underground metro track
+str_param_metrounderground_desc :Enable or disable underground metro tracks. Underground metro tracks are like metro tracks with catenary, but with a terrain roof on top.
+
+str_param_metroconcrete_name    :Underground urban metro track
+str_param_metroconcrete_desc    :Enable or disable underground urban metro tracks. Underground urban metro tracks are like metro tracks with catenary, but with a concrete roof on top.
+
+#metro track strings
+str_metrotrack_name                             :Metro Track
+str_metrotrack_toolbar_caption                  :Metro Track Construction
+str_metrotrack_menu_text                        :Metro track construction
+str_metrotrack_build_window_caption             :New Metro Vehicles
+str_metrotrack_autoreplace_text                 :Metro Vehicles
+str_metrotrack_new_engine_text                  :metro
+
+str_metrowithcatenarytrack_name                 :Metro Track with Catenary
+str_metrowithcatenarytrack_toolbar_caption      :Metro Track with Catenary Construction
+str_metrowithcatenarytrack_menu_text            :Metro track with catenary construction
+str_metrowithcatenarytrack_build_window_caption :New Metro with Catenary Vehicles
+str_metrowithcatenarytrack_autoreplace_text     :Metro with Catenary Vehicles
+str_metrowithcatenarytrack_new_engine_text      :metro with catenary
+
+str_metroundergroundtrack_name                  :Underground Metro Track
+str_metroundergroundtrack_toolbar_caption       :Underground Metro Track Construction
+str_metroundergroundtrack_menu_text             :Underground metro track construction
+str_metroundergroundtrack_build_window_caption  :New Underground Metro Vehicles
+str_metroundergroundtrack_autoreplace_text      :Underground Metro Vehicles
+str_metroundergroundtrack_new_engine_text       :underground metro
+
+str_metroconcretetrack_name                     :Underground Urban Metro Track
+str_metroconcretetrack_toolbar_caption          :Underground Urban Metro Track Construction
+str_metroconcretetrack_menu_text                :Underground urban metro track construction
+str_metroconcretetrack_build_window_caption     :New Underground Urban Metro Vehicles
+str_metroconcretetrack_autoreplace_text         :Underground Urban Metro Vehicles
+str_metroconcretetrack_new_engine_text          :underground urban metro

@@ -1,0 +1,85 @@
+##grflangid 0x07
+##plural 6
+##gender m f n p
+##case abl acc dat f gen m n nom p pre
+
+#Main grf title and description
+STR_GRF_NAME                    :{TITLE}
+STR_GRF_DESCRIPTION             :{SILVER}Рельсы метро для OpenTTD{}{}{BLACK}"Подземные" рельсы для метро настраиваются через конфигурацию параметров.{}{}Лицензия: GPLv2 или выше.{}Смотрите readme для подробной информации.
+STR_GRF_URL             :http://www.tt-forums.net/viewtopic.php?t=49476
+
+str_low_version         :Ваша версия OpenTTD устарела. Необходимо обновить для обеспечения корректной работы.
+str_no_railtypes_enabled:Все типы рельсов отключены. Не имеет смысла использовать набор, если все предлагаемые им типы рельсов отключены. Включите какие-нибудь типы рельсов или удалите набор.
+str_no_free_slots       :Отсутствует свободный слот для дополнительного типа рельсов. Вы загрузили дополнительные типы рельсов, которые использовали все слоты. Освободить слоты можно удалив другой набор с рельсами и/или выбрав замену монорельса и/или маглева.
+str_some_disabled       :Не достаточно свободных слотов для дополнительных типов рельсов. Вы загрузили дополнительные типы рельсов, которые заняли слишком много слотов. Освободить место можно удалив другой набор с рельсами и/или выбрав замену монорельса и/или маглева.
+
+str_param_gui_name              :Внешний вид интерфейса
+str_param_gui_desc              :Позволяет выбрать стиль кнопок меню и курсоров.
+str_param_opengfx               :OpenGFX
+str_param_ttd                   :TTD
+
+str_param_terrain_name          :Ладншафт и стиль рельсов
+str_param_terrain_desc          :Позволяет выбрать тип земли и рельсов. Автоматический выбор параметров копирует параметры с интерфейса или с Японского ландшафта (если загружен).
+str_param_auto                  :Авто (по умолчанию)
+str_param_japanset              :Японский Ландшафт
+
+str_param_extrasnow_name        :Заснеженные рельсы
+str_param_extrasnow_desc        :Включить (по умолчанию) или отключить дополнительный снег на путях. При включении сквозь снег будут видны только рельсы. Крыши депо будут покрыты снегом.
+
+str_param_levelcrossings_name   :Ж/д переезды
+str_param_levelcrossings_desc   :Позволяет включить или отключить (по умолчанию) возможность постройки ж/д переездов для метрополитена. Влияет на метрополитен и метрополитен с верхним контактным проводом. Ж/д переезды с подземной железной дорогой не допускаются.
+
+str_param_customsignals_name    :Новые сигналы
+str_param_customsignals_desc    :Позволяет включить (по умолчанию) новые сигналы для метрополитена или оставить стандартные сигналы.
+
+str_param_otherengines_name     :Использование метрополитена другими поездами
+str_param_otherengines_desc     :Позволяет выбрать, какие другие типы поездов совместимы с метрополитеном. Поезда будут иметь тягу только если соответствующий источник доступен для метрополитена. Работает только для поездов по-умолчанию и поддерживаемых наборов (Dutch Tracks).
+str_param_otherengines_off      :Выключено (по умолчанию)
+str_param_otherengines_RAIL     :Только неэлектрофицированные
+str_param_otherengines_ELRL     :Только электрофицированные
+str_param_otherengines_RAILELRL :Электрофицированные и неэлектрофицированные
+
+str_param_metro_name            :Метрополитен
+str_param_metro_desc            :Позволяет отключить метрополитен или заменить им монорельс/маглев.{}Внимание: Если вы включили метрополитен, а он не доступен в меню, значит для него нет доступных поездов.
+str_param_metro_off             :Выключен
+str_param_metro_separate_default:Дополнительный тип ж/д (по умолчанию)
+str_param_metro_replacemono     :Замена монорельса
+str_param_metro_replacemglv     :Замена маглева
+
+str_param_metrowithcatenary_name:Метрополитен с верхним контактным проводом
+str_param_metrowithcatenary_desc:Позволяет отключить метрополитен с верхним контактным проводом или заменить им монорельс/маглев.
+
+str_param_metrounderground_name :Подземная железная дорога
+str_param_metrounderground_desc :Позволяет отключить подземную железную дорогу. Подземная железная дорога - это метрополитен с верхним контактным проводом под земляным сводом.
+
+str_param_metroconcrete_name    :Городская подземная железная дорога
+str_param_metroconcrete_desc    :Позволяет отключить городскую подземную железную дорогу. Городская подземная железная дорога - это метрополитен с верхним контактным проводом под бетонным сводом.
+
+#metro track strings
+str_metrotrack_name                             :Метрополитен
+str_metrotrack_toolbar_caption                  :Строительство метрополитена
+str_metrotrack_menu_text                        :Строительство метрополитена
+str_metrotrack_build_window_caption             :Новые поезда метрополитена
+str_metrotrack_autoreplace_text                 :Поезда метрополитена
+str_metrotrack_new_engine_text                  :метрополитен
+
+str_metrowithcatenarytrack_name                 :Метрополитен с верхним контактным проводом
+str_metrowithcatenarytrack_toolbar_caption      :Строительство метрополитена с верхним контактным проводом
+str_metrowithcatenarytrack_menu_text            :Строительство метрополитена с верхним контактным проводом
+str_metrowithcatenarytrack_build_window_caption :Новые поезда метрополитена с верхним контактным проводом
+str_metrowithcatenarytrack_autoreplace_text     :Поезда метрополитена с верхним контактным проводом
+str_metrowithcatenarytrack_new_engine_text      :метрополитен с верхним контактным проводом
+
+str_metroundergroundtrack_name                  :Подземная железная дорога
+str_metroundergroundtrack_toolbar_caption       :Строительство подземной железной дороги
+str_metroundergroundtrack_menu_text             :Строительство подземной железной дороги
+str_metroundergroundtrack_build_window_caption  :Новые поезда подземной железной дороги
+str_metroundergroundtrack_autoreplace_text      :Поезд подземной железной дороги
+str_metroundergroundtrack_new_engine_text       :подземная железная дорога
+
+str_metroconcretetrack_name                     :Городская подземная железная дорога
+str_metroconcretetrack_toolbar_caption          :Строительство городской подземной железной дороги
+str_metroconcretetrack_menu_text                :Строительство городской подземной железной дороги
+str_metroconcretetrack_build_window_caption     :Новые поезда городской подземной железной дороги
+str_metroconcretetrack_autoreplace_text         :Поезд городской подземной железной дороги
+str_metroconcretetrack_new_engine_text          :городская подземная железная дорога

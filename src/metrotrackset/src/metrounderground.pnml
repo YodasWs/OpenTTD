@@ -1,0 +1,280 @@
+/*
+ *  Copyright (C) 2012 Jasper Vries
+ *  This file is part of Metro Track Set
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+spriteset (spriteset_metrounderground_gui_opengfx, "gfx/ogfx_underground_gui.png") {
+    template_gui(10,20)
+}
+spriteset (spriteset_metrounderground_gui_ttd, "gfx/ttd_underground_gui.png") {
+    template_gui_ttd(10,20)
+}
+switch (FEAT_RAILTYPES, SELF, switch_metrounderground_metro_gui, param_gui) {
+    1: spriteset_metrounderground_gui_ttd;
+    spriteset_metrounderground_gui_opengfx;
+}
+//opengfx track cover
+spriteset (spriteset_metrounderground_catenary_wire_opengfx_temperate, "gfx/terrain/temperate.png") {
+    template_catenary_wire(1,1)
+}
+spriteset (spriteset_metrounderground_catenary_wire_opengfx_arctic, "gfx/terrain/arctic.png") {
+    template_catenary_wire(1,1)
+}
+spriteset (spriteset_metrounderground_catenary_wire_opengfx_desert, "gfx/terrain/desert.png") {
+    template_catenary_wire(1,1)
+}
+spriteset (spriteset_metrounderground_catenary_wire_opengfx_snow, "gfx/terrain/snow.png") {
+    template_catenary_wire(1,1)
+}
+spriteset (spriteset_metrounderground_catenary_wire_opengfx_toyland, "gfx/terrain/toyland.png") {
+    template_catenary_wire(1,1)
+}
+spriteset (spriteset_metrounderground_catenary_wire_opengfx_tropical, "gfx/terrain/tropical.png") {
+    template_catenary_wire(1,1)
+}
+switch (FEAT_RAILTYPES, SELF, switch_metrounderground_catenary_wire_opengfx_climate, climate) {
+    CLIMATE_ARCTIC          :spriteset_metrounderground_catenary_wire_opengfx_arctic;
+    CLIMATE_TROPICAL        :spriteset_metrounderground_catenary_wire_opengfx_tropical;
+    CLIMATE_TOYLAND         :spriteset_metrounderground_catenary_wire_opengfx_toyland;
+    spriteset_metrounderground_catenary_wire_opengfx_temperate;
+}
+switch (FEAT_RAILTYPES, SELF, switch_metrounderground_catenary_wire_opengfx_terrain_type, terrain_type) {
+    TILETYPE_DESERT         :spriteset_metrounderground_catenary_wire_opengfx_desert;
+    TILETYPE_RAIN_FOREST    :spriteset_metrounderground_catenary_wire_opengfx_tropical; //this is separate from the default tropical grass
+    TILETYPE_SNOW           :spriteset_metrounderground_catenary_wire_opengfx_snow;
+    switch_metrounderground_catenary_wire_opengfx_climate;
+}
+//ttd track cover
+spriteset (spriteset_metrounderground_catenary_wire_ttd_temperate, "gfx/terrain_ttd/temperate.png") {
+    template_catenary_wire(1,1)
+}
+spriteset (spriteset_metrounderground_catenary_wire_ttd_arctic, "gfx/terrain_ttd/arctic.png") {
+    template_catenary_wire(1,1)
+}
+spriteset (spriteset_metrounderground_catenary_wire_ttd_desert, "gfx/terrain_ttd/desert.png") {
+    template_catenary_wire(1,1)
+}
+spriteset (spriteset_metrounderground_catenary_wire_ttd_snow, "gfx/terrain_ttd/snow.png") {
+    template_catenary_wire(1,1)
+}
+spriteset (spriteset_metrounderground_catenary_wire_ttd_toyland, "gfx/terrain_ttd/toyland.png") {
+    template_catenary_wire(1,1)
+}
+spriteset (spriteset_metrounderground_catenary_wire_ttd_tropical, "gfx/terrain_ttd/tropical.png") {
+    template_catenary_wire(1,1)
+}
+switch (FEAT_RAILTYPES, SELF, switch_metrounderground_catenary_wire_ttd_climate, climate) {
+    CLIMATE_ARCTIC          :spriteset_metrounderground_catenary_wire_ttd_arctic;
+    CLIMATE_TROPICAL        :spriteset_metrounderground_catenary_wire_ttd_tropical;
+    CLIMATE_TOYLAND         :spriteset_metrounderground_catenary_wire_ttd_toyland;
+    spriteset_metrounderground_catenary_wire_ttd_temperate;
+}
+switch (FEAT_RAILTYPES, SELF, switch_metrounderground_catenary_wire_ttd_terrain_type, terrain_type) {
+    TILETYPE_DESERT         :spriteset_metrounderground_catenary_wire_ttd_desert;
+    TILETYPE_RAIN_FOREST    :spriteset_metrounderground_catenary_wire_ttd_tropical; //this is separate from the default tropical grass
+    TILETYPE_SNOW           :spriteset_metrounderground_catenary_wire_ttd_snow;
+    switch_metrounderground_catenary_wire_ttd_climate;
+}
+//japan set landscape
+spriteset (spriteset_metrounderground_catenary_wire_japanset, "gfx/terrain/japanset.png") {
+    template_catenary_wire(1,1)
+}
+//select terrain from parameter
+switch (FEAT_RAILTYPES, SELF, switch_metrounderground_catenary_wire_param_gui, param_gui) {
+    1                       :switch_metrounderground_catenary_wire_ttd_terrain_type;
+    switch_metrounderground_catenary_wire_opengfx_terrain_type;
+}
+switch (FEAT_RAILTYPES, SELF, switch_metrounderground_catenary_wire_param, param_terrain_use) {
+    1                       :switch_metrounderground_catenary_wire_opengfx_terrain_type;
+    2                       :switch_metrounderground_catenary_wire_ttd_terrain_type;
+    3                       :spriteset_metrounderground_catenary_wire_japanset;
+    switch_metrounderground_catenary_wire_param_gui;
+}
+
+spriteset (spriteset_metrounderground_catenary_pylons, "gfx/terrain/temperate.png") {
+    template_catenary_pylons(1,1)
+}
+
+//opengfx tunnel overlays
+spriteset (spriteset_metrounderground_tunnel_overlay_opengfx_temperate, "gfx/terrain/temperate.png") {
+    template_tunnel_overlay(1,51)
+}
+spriteset (spriteset_metrounderground_tunnel_overlay_opengfx_arctic, "gfx/terrain/arctic.png") {
+    template_tunnel_overlay(1,51)
+}
+spriteset (spriteset_metrounderground_tunnel_overlay_opengfx_snow, "gfx/terrain/snow.png") {
+    template_tunnel_overlay(1,51)
+}
+spriteset (spriteset_metrounderground_tunnel_overlay_opengfx_tropical, "gfx/terrain/tropical.png") {
+    template_tunnel_overlay(1,51)
+}
+spriteset (spriteset_metrounderground_tunnel_overlay_opengfx_desert, "gfx/terrain/desert.png") {
+    template_tunnel_overlay(1,51)
+}
+spriteset (spriteset_metrounderground_tunnel_overlay_opengfx_toyland, "gfx/terrain/toyland.png") {
+    template_tunnel_overlay(1,51)
+}
+switch (FEAT_RAILTYPES, SELF, switch_metrounderground_tunnel_overlay_opengfx_climate, climate) {
+    CLIMATE_ARCTIC          :spriteset_metrounderground_tunnel_overlay_opengfx_arctic;
+    CLIMATE_TROPICAL        :spriteset_metrounderground_tunnel_overlay_opengfx_tropical;
+    CLIMATE_TOYLAND         :spriteset_metrounderground_tunnel_overlay_opengfx_toyland;
+    spriteset_metrounderground_tunnel_overlay_opengfx_temperate;
+}
+switch (FEAT_RAILTYPES, SELF, switch_metrounderground_tunnel_overlay_opengfx_terrain_type, terrain_type) {
+    TILETYPE_DESERT         :spriteset_metrounderground_tunnel_overlay_opengfx_desert;
+    TILETYPE_RAIN_FOREST    :spriteset_metrounderground_tunnel_overlay_opengfx_tropical; //this is separate from the default tropical grass
+    TILETYPE_SNOW           :spriteset_metrounderground_tunnel_overlay_opengfx_snow;
+    switch_metrounderground_tunnel_overlay_opengfx_climate;
+}
+//ttd tunnel overlays
+spriteset (spriteset_metrounderground_tunnel_overlay_ttd_temperate, "gfx/terrain_ttd/temperate.png") {
+    template_tunnel_overlay(1,51)
+}
+spriteset (spriteset_metrounderground_tunnel_overlay_ttd_arctic, "gfx/terrain_ttd/arctic.png") {
+    template_tunnel_overlay(1,51)
+}
+spriteset (spriteset_metrounderground_tunnel_overlay_ttd_snow, "gfx/terrain_ttd/snow.png") {
+    template_tunnel_overlay(1,51)
+}
+spriteset (spriteset_metrounderground_tunnel_overlay_ttd_tropical, "gfx/terrain_ttd/tropical.png") {
+    template_tunnel_overlay(1,51)
+}
+spriteset (spriteset_metrounderground_tunnel_overlay_ttd_desert, "gfx/terrain_ttd/desert.png") {
+    template_tunnel_overlay(1,51)
+}
+spriteset (spriteset_metrounderground_tunnel_overlay_ttd_toyland, "gfx/terrain_ttd/toyland.png") {
+    template_tunnel_overlay(1,51)
+}
+switch (FEAT_RAILTYPES, SELF, switch_metrounderground_tunnel_overlay_ttd_climate, climate) {
+    CLIMATE_ARCTIC          :spriteset_metrounderground_tunnel_overlay_ttd_arctic;
+    CLIMATE_TROPICAL        :spriteset_metrounderground_tunnel_overlay_ttd_tropical;
+    CLIMATE_TOYLAND         :spriteset_metrounderground_tunnel_overlay_ttd_toyland;
+    spriteset_metrounderground_tunnel_overlay_ttd_temperate;
+}
+switch (FEAT_RAILTYPES, SELF, switch_metrounderground_tunnel_overlay_ttd_terrain_type, terrain_type) {
+    TILETYPE_DESERT         :spriteset_metrounderground_tunnel_overlay_ttd_desert;
+    TILETYPE_RAIN_FOREST    :spriteset_metrounderground_tunnel_overlay_ttd_tropical; //this is separate from the default tropical grass
+    TILETYPE_SNOW           :spriteset_metrounderground_tunnel_overlay_ttd_snow;
+    switch_metrounderground_tunnel_overlay_ttd_climate;
+}
+//japan set landscape
+spriteset (spriteset_metrounderground_tunnel_overlay_japanset, "gfx/terrain/japanset.png") {
+    template_catenary_wire(1,1)
+}
+//select terrain from parameter
+switch (FEAT_RAILTYPES, SELF, switch_metrounderground_tunnel_overlay_param_gui, param_gui) {
+    1                       :switch_metrounderground_tunnel_overlay_ttd_terrain_type;
+    switch_metrounderground_tunnel_overlay_opengfx_terrain_type;
+}
+switch (FEAT_RAILTYPES, SELF, switch_metrounderground_tunnel_overlay_param, param_terrain_use) {
+    1                       :switch_metrounderground_tunnel_overlay_opengfx_terrain_type;
+    2                       :switch_metrounderground_tunnel_overlay_ttd_terrain_type;
+    3                       :spriteset_metrounderground_tunnel_overlay_japanset;
+    switch_metrounderground_tunnel_overlay_param_gui;
+}
+
+if (param_metrounderground > 0) {
+    if (railtype_available("SSAZ") || (loading_stage == LOADING_STAGE_RESERVE)) {
+        //count number of activated railtypes
+        param_railtype_activated = param_railtype_activated + 1;
+        item (FEAT_RAILTYPES, item_metrounderground) {
+            property {
+                label:                          "SSAZ";
+                name:                           string(str_metroundergroundtrack_name);
+                menu_text:                      string(str_metroundergroundtrack_menu_text);
+                build_window_caption:           string(str_metroundergroundtrack_build_window_caption);
+                autoreplace_text:               string(str_metroundergroundtrack_autoreplace_text);
+                new_engine_text:                string(str_metroundergroundtrack_new_engine_text);
+                compatible_railtype_list:       ["RAIL", "ELRL",
+                                                 "SAAN", "SABN", "SACN", "SADN", "SAEN",
+                                                 "SAAE", "SABE", "SACE", "SADE", "SAEE",
+                                                 "SAAD", "SABD", "SACD", "SADD", "SAED",
+                                                 "SAAd", "SABd", "SACd", "SADd", "SAEd",
+                                                 "SAAA", "SABA", "SACA", "SADA", "SAEA",
+                                                 "SAAa", "SABa", "SACa", "SADa", "SAEa",
+                                                 "SAA3", "SAAZ", "SUAZ"];
+                powered_railtype_list:          ["ELRL", 
+                                                 "SAAE", "SABE", "SACE", "SADE", "SAEE",
+                                                 "SAAD", "SABD", "SACD", "SADD", "SAED",
+                                                 "SAAd", "SABd", "SACd", "SADd", "SAEd",
+                                                 "SAAA", "SABA", "SACA", "SADA", "SAEA",
+                                                 "SAAa", "SABa", "SACa", "SADa", "SAEa",
+                                                 "SAA3", "SAAZ", "SUAZ"];
+                railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+                curve_speed_multiplier:         1;
+                station_graphics:               RAILTYPE_STATION_NORMAL;
+                speed_limit:                    0;
+                acceleration_model:             ACC_MODEL_RAIL;
+            }
+             //OpenTTD 1.1 19307
+            if (openttd_version >= version_openttd(1, 1, 0, 19307)) {
+                property {
+                    construction_cost:          64;
+                    map_colour:                 0x21;
+                }
+            }
+            /*
+            //OpenTTD 1.1 21866
+            if (openttd_version >= version_openttd(1, 1, 0, 21866)) {
+                property {
+                    //introduction_date:
+                    //requires_railtype_list:
+                    //introduces_railtype_list:
+                    //sort_order:
+                }
+            }
+            */
+            //OpenTTD 1.2 23758
+            if (openttd_version >= version_openttd(1, 2, 0, 23758)) {
+                property {
+                    toolbar_caption:            string(str_metroundergroundtrack_toolbar_caption);
+                    maintenance_cost:           24;
+                    alternative_railtype_list:  ["MTRT",
+                                                 "SSAZ", "SSBZ", "SSCZ", "SSDZ", "SSEZ"];
+                }
+            }
+            
+            //snowy version
+            if (param_extrasnow == 1) {
+                graphics {
+                    gui:                        switch_metrounderground_metro_gui;
+                    track_overlay:              switch_track_overlay_param;
+                    underlay:                   switch_underlay_param;
+                    tunnels:                    switch_tunnels_param;
+                    catenary_wire:              switch_metrounderground_catenary_wire_param;
+                    catenary_pylons:            spriteset_metrounderground_catenary_pylons;
+                    bridge_surfaces:            switch_bridge_surfaces_param;
+                    level_crossings:            switch_level_crossings_param;
+                    depots:                     switch_depots_opengfx_snow; 
+                    fences:                     spriteset_metrounderground_catenary_pylons;
+                    tunnel_overlay:             switch_metrounderground_tunnel_overlay_param;
+                    signals:                    switch_signals;
+                }
+            }
+            //normal ballast version
+            else {
+                graphics {
+                    gui:                        switch_metrounderground_metro_gui;
+                    track_overlay:              switch_track_overlay_param;
+                    underlay:                   switch_underlay_param;
+                    tunnels:                    switch_tunnels_param;
+                    catenary_wire:              switch_metrounderground_catenary_wire_param;
+                    catenary_pylons:            spriteset_metrounderground_catenary_pylons;
+                    bridge_surfaces:            switch_bridge_surfaces_param;
+                    level_crossings:            switch_level_crossings_param;
+                    //depot:
+                    fences:                     spriteset_metrounderground_catenary_pylons;
+                    tunnel_overlay:             switch_metrounderground_tunnel_overlay_param;
+                    signals:                    switch_signals;
+                }
+            }
+        }
+    }
+    else {
+        //count number of disabled railtypes
+        param_railtype_disabled = param_railtype_disabled + 1;
+    }
+}

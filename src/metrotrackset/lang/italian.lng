@@ -1,0 +1,85 @@
+##grflangid 0x27
+##plural 0
+##gender m ma f
+##case fp fs mp ms
+
+#Main grf title and description
+STR_GRF_NAME                    :{TITLE}
+STR_GRF_DESCRIPTION             :{SILVER}Linee Urbane e Suburbane per OpenTTD{}{}{BLACK}Le linee metropolitane sotterranee sono attivate con un parametro.{}{}Licenza: GPLv2 o superiore.{}Leggere il "readme" per ulteriori informazioni.
+STR_GRF_URL             :http://www.tt-forums.net/viewtopic.php?t=49476
+
+str_low_version         :Si sta usando una vecchia versione di OpenTTD.. Aggiornarlo per godere di tutte le caratteristiche di questo NewGRF.
+str_no_railtypes_enabled:Tutti i tipi di linee ferroviarie sono disabilitiati. Non ha senso usare questo set se i vari tipi di binari sono disattivati. Si consiglia di cambiare le impostazioni dei parametri, o di rimuovere questo set dalla lista dei NewGRF.
+str_no_free_slots       :Non c'è più spazio per ulteriori tipi di ferrovie. Sono stati caricati altri set di linee ferroviarie che occupano tutti gli spazi disponibili. Si consiglia di rimuovere gli altri set di binari, di cambiare i parametri di questo set in modo da sostituire la monorotaia e/o le linee maglev, oppure di disabilitare questo set.
+str_some_disabled       :Non c'è più spazio per ulteriori tipi di ferrovie. Sono stati caricati altri set di linee ferroviarie che occupano tutti gli spazi disponibili. Uno o più tipi di linee ferroviarie di questo set non possono essere usati. Si consiglia di rimuovere gli altri set di binari, di cambiare i parametri di questo set in modo da sostituire la monorotaia e/o le linee maglev, oppure di disabilitare questo set.
+
+str_param_gui_name              :Stile dell'interfaccia
+str_param_gui_desc              :Imposta lo stile dei pulsanti e dei cursori.
+str_param_opengfx               :OpenGFX
+str_param_ttd                   :TTD
+
+str_param_terrain_name          :Stile del terreno e delle linee ferroviarie
+str_param_terrain_desc          :Sceglie lo stile del terreno e dei binari di questo set. L'opzione di default userà la stessa impostazione dello stile dell'interfaccia (poco sopra), or il paesaggio del Set giapponese, se presente.
+str_param_auto                  :Automatico (default)
+str_param_japanset              :Paesaggio del set giapponese
+
+str_param_extrasnow_name        :Binari coperti di neve
+str_param_extrasnow_desc        :Attiva (default) o disattiva i binari innevati. Se attivati, solo i binari saranno visibili sul terreno innevato; le traversine e la massicciata saranno coperte di neve, così come i depositi.
+
+str_param_levelcrossings_name   :Passaggi a livello
+str_param_levelcrossings_desc   :Permette o impedisce (default) la costruzione dei passaggi a livello sulle linee suburbane (normali o con catenaria). I passaggi a livello non sono previsti sulle linee della metropolitana.
+
+str_param_customsignals_name    :Segnali specifici
+str_param_customsignals_desc    :Attiva (default) o disattiva i segnali specifici per le linee urbane e suburbane.
+
+str_param_otherengines_name     :Compatibilità con altri treni
+str_param_otherengines_desc     :Permette di scegliere quali altri tipi di treni possono circolare sulle ferrovie suburbane. I treni avranno bisogno di una fonte di alimentazione compatibile. Quest'opzione funziona correttamente solo per i binari standard di OTTD e per i tipi di binari supportati. Attualmente, sono supportati i "Binari olandesi".
+str_param_otherengines_off      :Disattivata (default)
+str_param_otherengines_RAIL     :Solo treni senza elettrificazione
+str_param_otherengines_ELRL     :Solo treni elettrificati
+str_param_otherengines_RAILELRL :Treni elettrificati e non
+
+str_param_metro_name            :Linee suburbane
+str_param_metro_desc            :Permette di disattivare le linee suburbane, o di metterle al posto della monorotaia/maglev anziché aggiungerli come tipi di linee a sé stanti.{}Nota: se questi tipi di linea sono disponibili ma non compaiono nel menu, significa che non è stato caricato un set di veicoli compatibile.
+str_param_metro_off             :Disattivate
+str_param_metro_separate_default:Nuove linee a sé stanti (default)
+str_param_metro_replacemono     :Sostituiscono la monorotaia
+str_param_metro_replacemglv     :Sostituiscono il maglev
+
+str_param_metrowithcatenary_name:Ferrovie suburbane con catenaria
+str_param_metrowithcatenary_desc:Permette di disattivare le linee suburbane con catenaria, o di metterle al posto della monorotaia o delle linee maglev, anziché averle come un tipo di binari a sé stante.
+
+str_param_metrounderground_name :Linee metropolitane
+str_param_metrounderground_desc :Attiva o disattiva le linee metropolitane. Queste ultime sono come le linee suburbane a catenaria, ma sono nascoste da uno strato di terreno.
+
+str_param_metroconcrete_name    :Linee metropolitane urbane
+str_param_metroconcrete_desc    :Attiva o disattiva le linee metropolitane urbane. Queste ultime sono come le linee suburbane a catenaria, ma sono nascoste da un tetto di cemento.
+
+#metro track strings
+str_metrotrack_name                             :Ferrovie suburbane
+str_metrotrack_toolbar_caption                  :Costruzione di linee ferroviarie suburbane
+str_metrotrack_menu_text                        :Costruzione di linee ferroviarie suburbane
+str_metrotrack_build_window_caption             :Nuovi veicoli per ferrovie suburbane
+str_metrotrack_autoreplace_text                 :Veicoli per ferrovie suburbane
+str_metrotrack_new_engine_text                  :ferrovia suburbana
+
+str_metrowithcatenarytrack_name                 :Linee ferroviarie suburbane con catenaria
+str_metrowithcatenarytrack_toolbar_caption      :Costruzione di linee ferroviarie suburbane con catenaria
+str_metrowithcatenarytrack_menu_text            :Linee ferroviarie suburbane con catenaria
+str_metrowithcatenarytrack_build_window_caption :Nuovi veicoli per ferrovie suburbane con catenaria
+str_metrowithcatenarytrack_autoreplace_text     :Veicoli per ferrovie suburbane con catenaria
+str_metrowithcatenarytrack_new_engine_text      :ferrovia suburbana con catenaria
+
+str_metroundergroundtrack_name                  :Linee metropolitane
+str_metroundergroundtrack_toolbar_caption       :Costruzione di linee metropolitane
+str_metroundergroundtrack_menu_text             :Costruzione di linee metropolitane
+str_metroundergroundtrack_build_window_caption  :Nuovi veicoli per metropolitane
+str_metroundergroundtrack_autoreplace_text      :Veicoli per metropolitane
+str_metroundergroundtrack_new_engine_text       :metropolitana
+
+str_metroconcretetrack_name                     :Linee metropolitane urbane
+str_metroconcretetrack_toolbar_caption          :Costruzione di linee metropolitane urbane
+str_metroconcretetrack_menu_text                :Costruzione di linee metropolitane urbane
+str_metroconcretetrack_build_window_caption     :Nuovi veicoli per metropolitane urbane
+str_metroconcretetrack_autoreplace_text         :Veicoli per metropolitane urbane
+str_metroconcretetrack_new_engine_text          :metropolitana urbana

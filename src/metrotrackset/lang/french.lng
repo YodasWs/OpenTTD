@@ -1,0 +1,84 @@
+##grflangid 0x03
+##plural 2
+##gender m m2 f
+
+#Main grf title and description
+STR_GRF_NAME                    :{TITLE}
+STR_GRF_DESCRIPTION             :{SILVER}Voies ferrées métro pour OpenTTD{}{}{BLACK}Un paramètre permet d'activer des voies "souterraines".{}{}Licence{NBSP}: GPLv2 ou plus.{}Voir le 'readme' pour plus de détails.
+STR_GRF_URL             :http://www.tt-forums.net/viewtopic.php?t=49476
+
+str_low_version         :La version d'OpenTTD employée est trop ancienne. Pour profiter de toutes les fonctionnalités de ce NewGRF, une version plus récente est nécessaire.
+str_no_railtypes_enabled:Tous les types de voies sont désactivés. Charger ce set et désactiver tous les types de voies ne fait aucun sens. Changer les paramètres, ou simplement enlever le Metro Track Set de la liste des NewGRFs chargés.
+str_no_free_slots       :Impossible de définir de nouveaux types de voie. Un ou plusieurs autres sets ont déjà défini d'autres types de voies et il n'en reste plus assez pour Metro Track Set. Pour remédier au problème, désactiver ce Set ou d'autres qui définissent des nouveaux types de voies, ou changer les paramètres pour remplacer le monorail et/ou le MagLev.
+str_some_disabled       :Pas assez de types de voies disponibles. Un ou plusieurs autres sets ont déjà défini d'autres types de voies et il n'en reste plus assez pour Metro Track Set. Pour remédier au problème, désactiver ce Set ou d'autres qui définissent des nouveaux types de voies, ou changer les paramètres pour remplacer le monorail et/ou le MagLev.
+
+str_param_gui_name              :Style de l'interface
+str_param_gui_desc              :Choisir l'apparence de l'interface et des curseurs du set.
+str_param_opengfx               :OpenGFX
+str_param_ttd                   :TTD
+
+str_param_terrain_name          :Apparence du terrain et des voies
+str_param_terrain_desc          :Choisir le style du terrain et des voies que ce set doit fournir. Le réglage automatique conduira au même style que celui défini pour l'interface, ou au style du Japan Set Landscape (s'il est chargé).
+str_param_auto                  :Automatique (par défaut)
+str_param_japanset              :Japan Set Landscape
+
+str_param_extrasnow_name        :Voies très enneigées
+str_param_extrasnow_desc        :En terrain enneigé, ce paramètre dessine les voies avec les traverses couvertes de neige. Les dépôts seront également enneigés.
+
+str_param_levelcrossings_name   :Passages à niveau
+str_param_levelcrossings_desc   :Autoriser ou interdire (par défaut) la construction de passages à niveau avec les voies de métro. Ce paramètre ne s'applique qu'aux voies de métro aériennes (avec ou sans caténaire). Sur les voies "souterraines", les passages à niveau ne sont jamais autorisés.
+
+str_param_customsignals_name    :Signaux spécifiques
+str_param_customsignals_desc    :De nouveaux signaux, spécifiques aux voies métro.
+
+str_param_otherengines_name     :Autoriser d'autres trains sur les voies métro
+str_param_otherengines_desc     :Choisir quels autres types de trains pourront emprunter les voies du métro. S'il n'y a pas de source de courant adaptée, certains trains ne pourront pas circuler dessus. Cette fonctionnalité ne fonctionne qu'avec les voies par défaut ou certains sets compatibles (Dutch Tracks, pour l'instant).
+str_param_otherengines_off      :Désactivé (par défaut)
+str_param_otherengines_RAIL     :Voie ferrée non-électrifiée seulement
+str_param_otherengines_ELRL     :Voie ferrée électrifiée seulement
+str_param_otherengines_RAILELRL :Voies standard (avec ou sans catéraire)
+
+str_param_metro_name            :Voies métro
+str_param_metro_desc            :Permet de désactiver les voies de métro ou de les faire remplacer le monorail/MagLev au lieu de définir de nouveaux types de voies.{}Note{NBSP}: si le type de voie est censé être activé mais n'apparaît pas dans le menu de construction, c'est parce qu'aucun set de véhicules approprié n'est chargé.
+str_param_metro_off             :Désactivé
+str_param_metro_separate_default:Types de voies additionnels (par défaut)
+str_param_metro_replacemono     :Remplacer le monorail
+str_param_metro_replacemglv     :Remplace le MagLev
+
+str_param_metrowithcatenary_name:Voies métro avec caténaire
+str_param_metrowithcatenary_desc:Permet de désactiver les voies métro avec caténaire, ou de les faire remplacer le monorail/MagLev au lieu de définir un nouveau type de voie.
+
+str_param_metrounderground_name :Voie métro souterraine
+str_param_metrounderground_desc :Permet d'activer ou de désactiver les voies métro souterraines. Ces voies sont identiques aux voies métro avec caténaires, mais avec un toit qui imite le terrain.
+
+str_param_metroconcrete_name    :Voie métro souterraine urbaine
+str_param_metroconcrete_desc    :Permet d'activer ou de désactiver les voies métro souterraines urbaines. Ces voies sont identiques aux voies souterraines de base, mais avec un toit en béton.
+
+#metro track strings
+str_metrotrack_name                             :Voie métro
+str_metrotrack_toolbar_caption                  :Construction de voie métro
+str_metrotrack_menu_text                        :Construction de voie métro
+str_metrotrack_build_window_caption             :Nouveaux véhicules métro
+str_metrotrack_autoreplace_text                 :Véhicules métro
+str_metrotrack_new_engine_text                  :métro
+
+str_metrowithcatenarytrack_name                 :Voie métro avec caténaire
+str_metrowithcatenarytrack_toolbar_caption      :Construction de voie métro avec caténaire
+str_metrowithcatenarytrack_menu_text            :Construction de voie métro avec caténaire
+str_metrowithcatenarytrack_build_window_caption :Nouveaux véhicules métro et à caténaire
+str_metrowithcatenarytrack_autoreplace_text     :Véhicules métro à pantographes
+str_metrowithcatenarytrack_new_engine_text      :métro avec caténaire
+
+str_metroundergroundtrack_name                  :Voie métro souterraine
+str_metroundergroundtrack_toolbar_caption       :Construction de voie métro souterraine
+str_metroundergroundtrack_menu_text             :Construction de voie métro souterraine
+str_metroundergroundtrack_build_window_caption  :Nouveaux véhicules métro souterrain
+str_metroundergroundtrack_autoreplace_text      :Véhicules métro souterrain
+str_metroundergroundtrack_new_engine_text       :métro souterrain
+
+str_metroconcretetrack_name                     :Voie métro souterraine urbaine
+str_metroconcretetrack_toolbar_caption          :Construction de voie métro souterraine urbaine
+str_metroconcretetrack_menu_text                :Construction de voie métro souterraine urbaine
+str_metroconcretetrack_build_window_caption     :Nouveaux véhicules métro souterrain urbain
+str_metroconcretetrack_autoreplace_text         :Véhicules métro souterrain urbain
+str_metroconcretetrack_new_engine_text          :métro souterrain urbain

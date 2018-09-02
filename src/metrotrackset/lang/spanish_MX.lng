@@ -1,0 +1,84 @@
+##grflangid 0x55
+##plural 0
+##gender m f
+
+#Main grf title and description
+STR_GRF_NAME                    :{TITLE}
+STR_GRF_DESCRIPTION             :{SILVER}Metro Tracks for OpenTTD (Vías del metro){}{}{BLACK}El metro "subterráneo" puede activerse en los parámetros.{}{}Licencia: GPL v2 o superior.{}Consulta el archivo Léeme para detalles.
+STR_GRF_URL             :http://www.tt-forums.net/viewtopic.php?t=49476
+
+str_low_version         :La versión de tu OpenTTD es muy vieja. Actualízala y disfruta de todo lo que tiene este NewGRF.
+str_no_railtypes_enabled:Ningún tipo de vía activado. No tiene caso cargar esta colección si se han deshabilitado sus tipos de vías. Revisa los parámetros o quita esta colección de la configuración de NewGRF.
+str_no_free_slots       :Ya no hay espacio para más tripos de vías. Uno o más NewGRF de vías que fueron cargados ocupan todo el espacio. Considera quitar otros NewGRF de vías, cambiar los parámetros de las vías del metro para emplear monorriel o maglev, o desactivar las vías del metro.
+str_some_disabled       :Ya no hay espacio para más tipos de vías. Uno o más NewGRF de vías que fueron cargados no permiten añadir los tipos de vías de esta colección. Uno o más tipos de vías del metro no estarán disponibles. Considera quitar otros NewGRF de vías, cambiar los parámetros de las vías del metro para emplear monorriel o maglev, o desactivar las vías del metro.
+
+str_param_gui_name              :Estilo de la interfaz
+str_param_gui_desc              :Elegir el estilo de los botones incluidos en esta colección.
+str_param_opengfx               :OpenGFX
+str_param_ttd                   :TTD
+
+str_param_terrain_name          :Estilo de terreno y vías
+str_param_terrain_desc          :Elegir el estilo del terreno y vías incluidos en esta colección. La opción automática tomará el mismo valor del estilo de interfaz o del Japan Set Landscape al cargarse.
+str_param_auto                  :Automático (predeterminado)
+str_param_japanset              :Japan Set Landscape
+
+str_param_extrasnow_name        :Vías adicionales con nieve
+str_param_extrasnow_desc        :Activar (predeterminado) o desactivar vías extra con nieve. Si se activa, solo los rieles serán visibles en terreno nevado pero no los durmientes y el balasto, y los depósitos estarán cubiertos de nieve.
+
+str_param_levelcrossings_name   :Pasos a nivel
+str_param_levelcrossings_desc   :Activar o desactivar (predeterminado) la construcción de pasos a nivel con vías del metro. Esta opción es válida solamente con vías del metro estándar con o sin catenaria. Las vías "subterráneas" nunca permiten la construcción de pasos a nivel.
+
+str_param_customsignals_name    :Señales especiales
+str_param_customsignals_desc    :Activar (predeterminado) o desactivar señales especiales para vías del metro.
+
+str_param_otherengines_name     :Permitir que otros trenes corran sobre las vías del metro
+str_param_otherengines_desc     :Elegir qué otros tipos de trenes (según sus tipos de vías) que pueden correr sobre las vías del metro. Los trenes avanzarán solo si las vías elegidas se lo permiten. Esta opción funciona únicamente con los trenes por defecto y ciertas colecciones de vías férreas. Vías compatibles: Dutch Tracks (Vías férreas holandesas).
+str_param_otherengines_off      :Desactivado (predeterminado)
+str_param_otherengines_RAIL     :Solo vías sin electrificar
+str_param_otherengines_ELRL     :Sólo vías electrificadas
+str_param_otherengines_RAILELRL :Vías con y sin electrificación
+
+str_param_metro_name            :Vías del metro
+str_param_metro_desc            :Permite desactivar vías del metro o construirlas como monorriel o magleve en lugar de añadirlas como un tipo de vías diferente.{}Atención: si el tipo de vías se establece como disponible en el menú de construcción no aparece, es porque no hay cargada ninguna colección de vehículos apropiada.
+str_param_metro_off             :Desactivado
+str_param_metro_separate_default:Tipo de vías adicional (predeterminado)
+str_param_metro_replacemono     :Sustituir monorriel
+str_param_metro_replacemglv     :Sustituir maglev
+
+str_param_metrowithcatenary_name:Vías del metro con catenaria
+str_param_metrowithcatenary_desc:Desactiva las vías del metro con catenaria o las construye como vías de monorriel o maglev en lugar de añadirlas como un tipo de vías diferente.
+
+str_param_metrounderground_name :Vías del metro subterráneo
+str_param_metrounderground_desc :Activar o desactivar vías del metro subterráneo. Son iguales que las vías del metro con catenaria pero con un techo de terreno natural.
+
+str_param_metroconcrete_name    :Vías del metro urbano subterráneo
+str_param_metroconcrete_desc    :Activar o desactivar vías del metro urbano subterráneo. Son iguales que las vías del metro con catenaria pero con un techo de concreto.
+
+#metro track strings
+str_metrotrack_name                             :Vías del metro
+str_metrotrack_toolbar_caption                  :Construcción de vías del metro
+str_metrotrack_menu_text                        :Construcción del metro
+str_metrotrack_build_window_caption             :Nuevos vehículos del metro
+str_metrotrack_autoreplace_text                 :Vehículos del metro
+str_metrotrack_new_engine_text                  :metro
+
+str_metrowithcatenarytrack_name                 :Vías del metro con catenaria
+str_metrowithcatenarytrack_toolbar_caption      :Vías del metro con construcción de catenaria
+str_metrowithcatenarytrack_menu_text            :Construcción del metro con catenaria
+str_metrowithcatenarytrack_build_window_caption :Nuevos vehículos del metro con catenaria
+str_metrowithcatenarytrack_autoreplace_text     :Vehículos del metro con catenaria
+str_metrowithcatenarytrack_new_engine_text      :metro con catenaria
+
+str_metroundergroundtrack_name                  :Vías del metro subterráneo
+str_metroundergroundtrack_toolbar_caption       :Construcción de vías del metro subterráneo
+str_metroundergroundtrack_menu_text             :Construcción de metro subterráneo
+str_metroundergroundtrack_build_window_caption  :Nuevos vehículos del metro subterráneo
+str_metroundergroundtrack_autoreplace_text      :Vehículos del metro subterráneo
+str_metroundergroundtrack_new_engine_text       :metro subterráneo
+
+str_metroconcretetrack_name                     :Vías del metro urbano subterráneo
+str_metroconcretetrack_toolbar_caption          :Construcción del metro urbano subterráneo
+str_metroconcretetrack_menu_text                :Construcción del metro urbano subterráneo
+str_metroconcretetrack_build_window_caption     :Nuevos vehículos del metro urbano subterráneo
+str_metroconcretetrack_autoreplace_text         :Vehículos del metro urbano subterráneo
+str_metroconcretetrack_new_engine_text          :metro urbano subterráneo

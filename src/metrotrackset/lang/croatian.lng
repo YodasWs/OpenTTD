@@ -1,0 +1,85 @@
+##grflangid 0x38
+##plural 6
+##gender male female middle
+##case aku dat gen ins lok nom vok
+
+#Main grf title and description
+STR_GRF_NAME                    :{TITLE}
+STR_GRF_DESCRIPTION             :{SILVER}Metro pruge za OpenTTD{}{}{BLACK}"Podzemne" metro pruge se mogu uključiti putem parametra.{}{}Licenca: GPLv2 ili viša.{}Vidi readme za detalje.
+STR_GRF_URL             :http://www.tt-forums.net/viewtopic.php?t=49476
+
+str_low_version         :Vaš OpenTTD je prestar. Nadogradite verziju da bi uživali u svemu što vam pruža ovaj NewGRF.
+str_no_railtypes_enabled:Sve vrste pruga su isključene. Nema smisla učitavati ovaj set ako isključite sve njegove vrste pruga. Provjerite postavke parametara ili maknite set metro pruga iz konfiguracije NewGRF-ova.
+str_no_free_slots       :Nema praznih mjesta za vrste pruge. Učitali ste jedan ili više setova pruga koji koriste sva mjesta za vrste pruhe. Razmislite o micanju drugih setova pruga, izmjenu parametara seta metro pruga tako da zamjenjuju jednotračne/maglev pruge ili maknite set metro pruga.
+str_some_disabled       :Nema dovoljno mjesta za vrste pruge. Učitali ste jedan ili više setova pruga koji ne ostavljaju dovoljno mjesta za set metro pruga. Jedna ili više vrsta pruge iz ovog seta nisu dostupne. Razmislite o micanju drugih setova pruga, izmjenu parametara seta metro pruga tako da zamjenjuju jednotračne/maglev pruge ili maknite set metro pruga.
+
+str_param_gui_name              :Stil sučelja
+str_param_gui_desc              :Odaberite stil dugmadi i pokazivača koje daje ovaj set.
+str_param_opengfx               :OpenGFX
+str_param_ttd                   :TTD
+
+str_param_terrain_name          :Stil terena i pruge
+str_param_terrain_desc          :Odaberite stil terena i pruga koje daje ovaj set. Automatska postavka će koristiti iste postavke kao i odabrano sučelje ili set japanskog krajolika ako je učitan.
+str_param_auto                  :Automatski (osnovna postavka)
+str_param_japanset              :Set japanskog krajolika
+
+str_param_extrasnow_name        :Pruge s dodatnim snijegom
+str_param_extrasnow_desc        :Uključite (osnovna postavka) pruge s dodatnim snijegom. Kada je uključeno, na terenu se  pokazuju samo tračnice bez pragova i balastnog kamenja, a depoi će biti prekriveni snijegom.
+
+str_param_levelcrossings_name   :Pružni prijelaz
+str_param_levelcrossings_desc   :Dozvoli ili zabrani (osnovna postavka) izgradnju pružnih prijelaza sa metro prugama. Ovo se odnosi samo na obične metro pruge i metro pruge sa žicama. "Podzemne" vrste metro pruga uvijek zabranjuju izgradnju pružnih prijelaza.
+
+str_param_customsignals_name    :Posebni signali
+str_param_customsignals_desc    :Uključi (osnovna postavka) ili isključi posebne signale za metro pruge.
+
+str_param_otherengines_name     :Dozvoli druge vlakove na metro pruge
+str_param_otherengines_desc     :Odaberite koje druge vrste vlakova (prema vrsti pruge) dozvoljavate na metro prugama. Vlakovi će imati pogon samo ako je njihov izvor napajanja dostupan na odabranim metro prugama. Ovo radi dobro samo za osnovne pruge i podržane setove pruga. Trenutno podržano: Nizozemske pruge.
+str_param_otherengines_off      :Isključeno (osnovna postavka)
+str_param_otherengines_RAIL     :Samo neelektrificirane pruge
+str_param_otherengines_ELRL     :Samo elektrificirane pruge
+str_param_otherengines_RAILELRL :Obje (ne)elektrificirane pruge
+
+str_param_metro_name            :Metro pruge
+str_param_metro_desc            :Dopušta isključivanje metro pruga ili zamjenu jednotračnih/maglev pruga sa metro prugama umjesto da se dodaju kao zasebna vrsta pruge.{}Napomena: ako se vrsta pruga namjesti da je dostupna ali se ne pojavljuje, to znači da nemate učitan odgovarajući set voziula.
+str_param_metro_off             :Isključeno
+str_param_metro_separate_default:Dodatna vrsta pruge (osnovna postavka)
+str_param_metro_replacemono     :Zamijeni jednotračne
+str_param_metro_replacemglv     :Zamijeni maglev
+
+str_param_metrowithcatenary_name:Metro pruge za žicama
+str_param_metrowithcatenary_desc:Dozvoljava isključivanje metro pruga sa žicama ili zamjenjuje jednotračne/maglev pruga sa metro prugama sa žicama umjesto da ih dodatje kao zasebnu vrstu pruge.
+
+str_param_metrounderground_name :Podzemne metro pruge
+str_param_metrounderground_desc :Uključi ili isključi podzemne metro pruge. Podzemne metro pruge su kao metro pruge sa žicama ali sa krovom u obliku terena iznad.
+
+str_param_metroconcrete_name    :Podzemne gradske metro pruge
+str_param_metroconcrete_desc    :Uključite ili isključite podzemne gradske metro pruge. Podzemne gradske metro pruge su kao metro pruge sa žicama ali sa betonskim krovom iznad.
+
+#metro track strings
+str_metrotrack_name                             :Metro pruge
+str_metrotrack_toolbar_caption                  :Izgradnja metro pruge
+str_metrotrack_menu_text                        :Izgradnja metro pruge
+str_metrotrack_build_window_caption             :Nova metro vozila
+str_metrotrack_autoreplace_text                 :Metro vozila
+str_metrotrack_new_engine_text                  :metro
+
+str_metrowithcatenarytrack_name                 :Metro pruge sa žicama
+str_metrowithcatenarytrack_toolbar_caption      :Metro pruge sa izgradnjom žica
+str_metrowithcatenarytrack_menu_text            :Metro pruge sa izgradnjom žica
+str_metrowithcatenarytrack_build_window_caption :Novi metro sa vozilima koja koriste žice
+str_metrowithcatenarytrack_autoreplace_text     :Metro sa vozilima koja koriste žice
+str_metrowithcatenarytrack_new_engine_text      :Metro sa žicama
+
+str_metroundergroundtrack_name                  :Podzemne metro pruge
+str_metroundergroundtrack_toolbar_caption       :Izgradnja podzemne metro pruge
+str_metroundergroundtrack_menu_text             :Izgradnja podzemne metro pruge
+str_metroundergroundtrack_build_window_caption  :Nova podzemna metro vozila
+str_metroundergroundtrack_autoreplace_text      :Podzemna metro vozila
+str_metroundergroundtrack_new_engine_text       :podzemni metro
+
+str_metroconcretetrack_name                     :Podzemne gradske metro pruge
+str_metroconcretetrack_toolbar_caption          :Izgradnja podzemne gradske metro pruge
+str_metroconcretetrack_menu_text                :Izgradnja podzemne gradske metro pruge
+str_metroconcretetrack_build_window_caption     :Nova podzemna gradska metro vozila
+str_metroconcretetrack_autoreplace_text         :Podzemna gradska metro vozila
+str_metroconcretetrack_new_engine_text          :podzemni gradski metro

@@ -1,0 +1,210 @@
+/*
+ *  Copyright (C) 2012 Jasper Vries
+ *  This file is part of Metro Track Set
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+spriteset (spriteset_metrowithcatenary_gui_opengfx, "gfx/ogfx_3rdc_gui.png") {
+    template_gui(10,20)
+}
+spriteset (spriteset_metrowithcatenary_gui_ttd, "gfx/ttd_3rdc_gui.png") {
+    template_gui_ttd(10,20)
+}
+switch (FEAT_RAILTYPES, SELF, switch_metrowithcatenary_metro_gui, param_gui) {
+    1: spriteset_metrowithcatenary_gui_ttd;
+    spriteset_metrowithcatenary_gui_opengfx;
+}
+
+if (param_metrowithcatenary > 0) {
+    if ((param_metrowithcatenary >= 2) || ((param_metrowithcatenary == 1) && (railtype_available("SAAZ") || (loading_stage == LOADING_STAGE_RESERVE)))) {
+        //count number of activated railtypes
+        param_railtype_activated = param_railtype_activated + 1;
+        item (FEAT_RAILTYPES, item_metrowithcatenary) {
+            //replace mono/mglv or add railtype
+            if (param_metrowithcatenary == 2) {
+                property {
+                    label:                          "MONO";
+                }
+            }
+            else if (param_metrowithcatenary == 3) {
+                property {
+                    label:                          "MGLV";
+                }
+            }
+            else {
+                property {
+                    label:                          "SAAZ";
+                }
+            }
+            
+            property {
+                name:                           string(str_metrowithcatenarytrack_name);
+                menu_text:                      string(str_metrowithcatenarytrack_menu_text);
+                build_window_caption:           string(str_metrowithcatenarytrack_build_window_caption);
+                autoreplace_text:               string(str_metrowithcatenarytrack_autoreplace_text);
+                new_engine_text:                string(str_metrowithcatenarytrack_new_engine_text);
+                compatible_railtype_list:       ["RAIL", "ELRL",
+                                                 "SAAN", "SABN", "SACN", "SADN", "SAEN",
+                                                 "SAAE", "SABE", "SACE", "SADE", "SAEE",
+                                                 "SAAD", "SABD", "SACD", "SADD", "SAED",
+                                                 "SAAd", "SABd", "SACd", "SADd", "SAEd",
+                                                 "SAAA", "SABA", "SACA", "SADA", "SAEA",
+                                                 "SAAa", "SABa", "SACa", "SADa", "SAEa",
+                                                 "SAA3", "SSAZ", "SUAZ"];
+                powered_railtype_list:          ["ELRL", 
+                                                 "SAAE", "SABE", "SACE", "SADE", "SAEE",
+                                                 "SAAD", "SABD", "SACD", "SADD", "SAED",
+                                                 "SAAd", "SABd", "SACd", "SADd", "SAEd",
+                                                 "SAAA", "SABA", "SACA", "SADA", "SAEA",
+                                                 "SAAa", "SABa", "SACa", "SADa", "SAEa",
+                                                 "SAA3", "SSAZ", "SUAZ"];
+                railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
+                curve_speed_multiplier:         1;
+                station_graphics:               RAILTYPE_STATION_NORMAL;
+                speed_limit:                    0;
+                acceleration_model:             ACC_MODEL_RAIL;
+            }
+            
+            //set compatible and powered depending on regular metro tracks
+            if (param_metrowithcatenary == 2) {
+                property {
+                    compatible_railtype_list:       ["RAIL", "ELRL",
+                                                     "SAAN", "SABN", "SACN", "SADN", "SAEN",
+                                                     "SAAE", "SABE", "SACE", "SADE", "SAEE",
+                                                     "SAAD", "SABD", "SACD", "SADD", "SAED",
+                                                     "SAAd", "SABd", "SACd", "SADd", "SAEd",
+                                                     "SAAA", "SABA", "SACA", "SADA", "SAEA",
+                                                     "SAAa", "SABa", "SACa", "SADa", "SAEa",
+                                                     "MONO", "SSAZ", "SUAZ"];
+                    powered_railtype_list:          ["ELRL", 
+                                                     "SAAE", "SABE", "SACE", "SADE", "SAEE",
+                                                     "SAAD", "SABD", "SACD", "SADD", "SAED",
+                                                     "SAAd", "SABd", "SACd", "SADd", "SAEd",
+                                                     "SAAA", "SABA", "SACA", "SADA", "SAEA",
+                                                     "SAAa", "SABa", "SACa", "SADa", "SAEa",
+                                                     "MONO", "SSAZ", "SUAZ"];
+                }
+            }
+            else if (param_metrowithcatenary == 3) {
+                property {
+                    compatible_railtype_list:       ["RAIL", "ELRL",
+                                                     "SAAN", "SABN", "SACN", "SADN", "SAEN",
+                                                     "SAAE", "SABE", "SACE", "SADE", "SAEE",
+                                                     "SAAD", "SABD", "SACD", "SADD", "SAED",
+                                                     "SAAd", "SABd", "SACd", "SADd", "SAEd",
+                                                     "SAAA", "SABA", "SACA", "SADA", "SAEA",
+                                                     "SAAa", "SABa", "SACa", "SADa", "SAEa",
+                                                     "MGLV", "SSAZ", "SUAZ"];
+                    powered_railtype_list:          ["ELRL", 
+                                                     "SAAE", "SABE", "SACE", "SADE", "SAEE",
+                                                     "SAAD", "SABD", "SACD", "SADD", "SAED",
+                                                     "SAAd", "SABd", "SACd", "SADd", "SAEd",
+                                                     "SAAA", "SABA", "SACA", "SADA", "SAEA",
+                                                     "SAAa", "SABa", "SACa", "SADa", "SAEa",
+                                                     "MGLV", "SSAZ", "SUAZ"];
+                }
+            }
+            else {
+                property {
+                    compatible_railtype_list:       ["RAIL", "ELRL",
+                                                     "SAAN", "SABN", "SACN", "SADN", "SAEN",
+                                                     "SAAE", "SABE", "SACE", "SADE", "SAEE",
+                                                     "SAAD", "SABD", "SACD", "SADD", "SAED",
+                                                     "SAAd", "SABd", "SACd", "SADd", "SAEd",
+                                                     "SAAA", "SABA", "SACA", "SADA", "SAEA",
+                                                     "SAAa", "SABa", "SACa", "SADa", "SAEa",
+                                                     "SAA3", "SSAZ", "SUAZ"];
+                    powered_railtype_list:          ["ELRL", 
+                                                     "SAAE", "SABE", "SACE", "SADE", "SAEE",
+                                                     "SAAD", "SABD", "SACD", "SADD", "SAED",
+                                                     "SAAd", "SABd", "SACd", "SADd", "SAEd",
+                                                     "SAAA", "SABA", "SACA", "SADA", "SAEA",
+                                                     "SAAa", "SABa", "SACa", "SADa", "SAEa",
+                                                     "SAA3", "SSAZ", "SUAZ"];
+                }
+            }
+            
+            //OpenTTD 1.1 19307
+            if (openttd_version >= version_openttd(1, 1, 0, 19307)) {
+                property {
+                    construction_cost:          16;
+                    map_colour:                 0x23;
+                }
+            }
+            
+            /*
+            //OpenTTD 1.1 21866
+            if (openttd_version >= version_openttd(1, 1, 0, 21866)) {
+                property {
+                    //introduction_date:
+                    //requires_railtype_list:
+                    //introduces_railtype_list:
+                    //sort_order:
+                }
+            }
+            */
+            
+            //OpenTTD 1.2 23758
+            if (openttd_version >= version_openttd(1, 2, 0, 23758)) {
+                property {
+                    toolbar_caption:            string(str_metrowithcatenarytrack_toolbar_caption);
+                    maintenance_cost:           16;
+                    alternative_railtype_list:  ["3RDC",
+                                                 "SAAZ", "SABZ", "SACZ", "SADZ", "SAEZ"];
+                }
+            }
+            
+            //disallow level crossings
+            if (param_levelcrossings == 0) {
+                property {
+                    railtype_flags:             bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+                }
+            }
+            
+            /*
+            *  GRAPHICS
+            */
+            
+            //snowy version
+            if (param_extrasnow == 1) {
+                graphics {
+                    gui:                        switch_metrowithcatenary_metro_gui;
+                    track_overlay:              switch_track_overlay_opengfx_snow;
+                    underlay:                   switch_underlay_opengfx_snow;
+                    tunnels:                    switch_tunnels_opengfx_snow;
+                    //catenary_wire:
+                    //catenary_pylons
+                    bridge_surfaces:            switch_bridge_surfaces_opengfx_snow;
+                    level_crossings:            switch_level_crossings_opengfx_snow;
+                    depots:                     switch_depots_opengfx_snow; 
+                    //fences:
+                    //tunnel_overlay:
+                    signals:                    switch_signals;
+                }
+            }
+            //normal ballast version
+            else {
+                graphics {
+                    gui:                        switch_metrowithcatenary_metro_gui;
+                    track_overlay:              switch_track_overlay_param;
+                    underlay:                   switch_underlay_param;
+                    tunnels:                    switch_tunnels_param;
+                    //catenary_wire:
+                    //catenary_pylons
+                    bridge_surfaces:            switch_bridge_surfaces_param;
+                    level_crossings:            switch_level_crossings_param;
+                    //depot:
+                    //fences:
+                    //tunnel_overlay:
+                    signals:                    switch_signals;
+                }
+            }
+        }
+    }
+    else {
+        //count number of disabled railtypes
+        param_railtype_disabled = param_railtype_disabled + 1;
+    }
+}

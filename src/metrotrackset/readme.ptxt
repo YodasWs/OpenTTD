@@ -1,0 +1,309 @@
+{{GRF_TITLE}}
+===================================
+Metro Tracks for OpenTTD
+
+----------
+0 Contents
+----------
+
+1   About
+2   General information
+    2.1  Requirements
+    2.2  Installation
+    2.3  Parameter settings
+    2.4  Usage
+3   Known issues
+4   Background information
+5   Frequently Asked Questions
+6   Credits
+7   Contact information
+    7.1  Bug reports
+    7.2  Other problems
+    7.3  General enquiries
+8   License
+9   Obtaining the source
+
+
+
+-------
+1 About
+-------
+
+The Metro Track Set adds third rail tracks to OpenTTD. It can add Metro 
+Tracks as a new railtype or at your option replace monorail or maglev 
+with Metro Tracks instead. You should be able to use it in combination
+with any trainset providing metro vehicles. Three different railtypes
+are provided: regular metro, metro with catenary and "underground" tracks.
+
+{{GRF_TITLE}}
+MD5Hash:  {{GRF_MD5}}
+Version:  {{REPO_REVISION}}
+GRF ID:   FBFB0402
+
+
+
+---------------------
+2 General information
+---------------------
+
+2.1 Requirements
+----------------
+OpenTTD:
+  OpenTTD 1.2.0 (r23758) or newer is recommended.
+  The set should work from nightly r23166, but then some features will
+  be disabled. Anything lower than r23758 is unsupported and for use at
+  own discretion.
+TTDPatch:
+  Not compatible.
+
+
+
+2.2 Installation
+----------------
+OpenTTD:
+  see http://wiki.openttd.org/NewGRF
+  This NewGRF is available from the ingame Online Content
+
+
+2.3 Parameter settings
+----------------------
+You can set the parameters via the ingame parameter settings window. In
+this section an overview of the available settings.
+
+Interface style
+    NewGRFs cannot detect what base graphics set you're using. You can 
+    use this setting to make the buttons and cursors provided by this 
+    set match your base graphics.
+    
+Terrain and track style
+    By default the track and the terrain for "underground" metro tracks 
+    will match the base graphics set selected for the interface style or
+    the Japan Set Landscape (GRFID 45520B00) terrain when loaded.
+    You can use this setting to deviate from this behaviour.
+
+Extra snowy tracks
+    With this option you'll only see the tracks and no ballast on snowy
+    terrain. This setting only has effect on railtypes provided by this 
+    set.
+
+Level crossings
+    Whether or not to allow construction of level crossings with metro
+    track.
+    
+Custom signals
+    Custom signals are provided for metro tracks. These signals are less
+    tall and better match the underground track types. You can disable
+    them to get the default signals if you don't like the custom ones.
+
+Allow other trains on metro track
+    With this setting you can allow normal rail vehicles on metro track.
+    This setting may not work correctly if you have other track sets
+    loaded as well, in which case you may want to disable this option.
+    
+Then there are settings for each individual railtype. This allows to 
+disable railtypes that you don't want. Furthermore for the metro and 
+metro with catenary track types you can set them to replace monorail or
+maglev rather than have them added as additional railtype.
+
+
+2.4 Usage
+---------
+Tracks will only be available if you have a train set loaded that 
+provides metro vehicles. The following trainsets available from the 
+OpenTTD Online Content were tested with the Metro Track Set. Between 
+brackets is the version number that was tested during writing of this 
+readme.
+
+COMPATIBLE:
+
+2cc Subways from the 2cc Set (611)
+    Set the parameter to have metro tracks replace monorail.
+
+2CC Trainset (757/v2.0.0 Beta 5)
+    Set the parameter to have metro tracks replace monorail.
+    
+Dutch Trainset 2 (625/2.0.0-alpha5)
+    Allow other trains on metro tracks at personal preference.
+
+UK Railway Set UKRS2 (1010/1.01)
+    Set the parameter to allow other trains on metro tracks.
+
+INCOMPATIBLE:
+
+Metro Subway Set (prealpha3.1)
+    This set defines metro vehicles as regular electrified rail vehicles.
+
+
+
+--------------
+3 Known issues
+--------------
+    
+Glitches with underground track types
+    The underground track types do some fancy stuff with catenary what
+    OpenTTD isn't designed to do. This results in some glitches, where
+    stuff that is supposed to be under the track cover is drawn on top.
+    This is especially noticable on diagonal tracks where trains flicker
+    through the roof, stations which may be partly visible and signals
+    that are not always drawn under the track cover. These issues cannot
+    be solved without modifying OpenTTD, something outside the scope of
+    this (or any) NewGRF.
+
+
+
+------------------------
+4 Background information
+------------------------
+
+The system used in this set is commonly known as a 'bottom contact third 
+rail', where the third rail sits at either side of the running rails and 
+is slightly elevated above the ground (in the order of a foot (30 cm) or 
+something). This type of third rail has a protective cover on top of the 
+live rail preventing direct contact and therefore limiting the risk of 
+electrocution.
+This set is inspired by the Dutch metro systems of Amsterdam and 
+Rotterdam which both use the type of third rail as described above 
+(and where the protective cover is in fact yellow).
+
+
+
+----------------------------
+5 Frequently Asked Questions
+----------------------------
+
+Q: The Metro Tracks are not buildable, why is that?
+A: The Metro Tracks are only availabe if there are metro vehicles 
+   available. These metro vehicles must be provided by a third-party 
+   vehicle set and are not available by default in OpenTTD.
+
+Q: My metro vehicles are running on some other track than the Metro 
+   Tracks, can you fix that?
+A: You can easily fix that yourself using the parameter options, 
+   allowing the Metro Tracks to replace either the maglev or the 
+   monorail tracks.
+
+Q: Can I use a train set that has metro vehicles on monorail or maglev 
+   and a train set that has metro vehicles on third rail at the same 
+   time?
+A: Yes you can. Set the parameter to replace monorail/maglev with metro.
+
+Q: How many different railtypes can I have in a single game?
+A: In addition to normal rail, electrified rail, monorail and maglev 
+   NewGRFs can add up to 12 new railtypes, adding up to a total of 16. 
+   The four default railtypes cannot be undefined to make more room for 
+   new railtypes, but NewGRFs may replace them. Parameter settings in 
+   this set allow to replace monorail and maglev so that you can use the 
+   available railtype slots as efficiently as possible
+
+Q: Do you have a non-railtypes version of this?
+A: This NewGRF solely uses OpenTTD's railtypes feature to provide the 
+    new track types. If you just want a classic graphics replacement of 
+    either monorail or maglev track, have a look at Metro Track Set 
+    version 1.1.0 available here: http://bundles.openttdcoop.org/metrotr
+    ackset/releases/1.1.0/ source: http://dev.openttdcoop.org/projects/m
+    etrotrackset/repository/show?rev=1.1.0
+
+
+
+---------
+6 Credits
+---------
+
+Metro Track Set developers:
+    FooBar: coding, general graphics manipulation, OpenGFX support, 
+            signal graphics.
+    Purno:  idea, third rail graphics.
+  
+The set contains (parts of) graphics by others:
+    TTD graphics:                Simon Foster.
+    OpenGFX Track graphics:      Zephyris.
+    OpenGFX GUI graphics:        Bubersson and LordAzamath and Zephyris.
+    Japan Set Landscape terrain: Sanchimaru, Jezulkim, Prissi and/or 
+                                 Zimmlock.
+    
+Makefile build system:
+    planetmaker
+
+Special thanks to:
+  XeryusTC      - initial release
+  DJ Nekkid     - saving the set's future by taking over development
+                  and handing it over to FooBar shortly after
+
+
+
+---------------------
+7 Contact information
+---------------------
+
+7.1 Bug reports
+---------------
+Please report any bugs you find at
+  bug tracker: http://dev.openttdcoop.org/projects/metrotrackset/issues
+  or forum topic: http://www.tt-forums.net/viewtopic.php?t=49476
+
+Always included a detailed description of the bug, preferrably with
+screenshot and savegame. Also state the exact game version you're using, 
+as well as the version of this NewGRF.
+
+If you have a savegame that includes NewGRFs not available on OpenTTD's 
+Online Content, then please try to reproduce the bug in a new game 
+which has all NewGRFs easily accessible.
+
+If you're using a patched version of the game, please try to reproduce
+the bug on an official game build. If you can't reproduce the bug, then
+don't report it here but in the forum topic of the patch(pack) instead.
+
+
+7.2 Other problems
+------------------
+If you have any problems using this NewGRF that are not covered in the 
+Frequently Asked Questions above, then you can ask your questions in the
+forum topic: http://www.tt-forums.net/viewtopic.php?t=49476
+
+
+7.3 General enquiries
+---------------------
+
+If you have any queries that cannot be asked in the forum topic, then
+contact FooBar via Private Message at www.tt-forums.net or send
+an email to foobar at jaspervries.nl.
+
+
+
+---------
+8 License
+---------
+
+Metro Track Set - Metro Tracks for OpenTTD
+Copyright (C) 2010,2012,2014 Metro Track Set Developers
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+
+
+----------------------
+9 Obtaining the source
+----------------------
+
+The source code can be obtained from the #openttdcoop DevZone
+via source browser:
+    http://dev.openttdcoop.org/projects/metrotrackset/repository
+or via mercurial checkout:
+    hg clone http://hg.openttdcoop.org/metrotrackset
+or via a source bundle download (releases only):
+    http://bundles.openttdcoop.org/metrotrackset/
+
+How to build from source and the requirements for that are included 
+with the source in the file /docs/building_from_source.txt.
