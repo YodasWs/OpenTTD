@@ -9,31 +9,6 @@ if (hasbit(param_otherengines,0)) {
                 compatible_railtype_list:       ["SAA3", "SAAZ", "SSAZ", "SUAZ"];
                 powered_railtype_list:          ["SAA3", "SAAZ", "SSAZ", "SUAZ"];
             }
-            // If moved to mono or maglev
-            if (param_metro == 2) {
-                property {
-                    compatible_railtype_list:       ["MONO"];
-                    powered_railtype_list:          ["MONO"];
-                }
-            }
-            if (param_metro == 3) {
-                property {
-                    compatible_railtype_list:       ["MGLV"];
-                    powered_railtype_list:          ["MGLV"];
-                }
-            }
-            if (param_metrowithcatenary == 2) {
-                property {
-                    compatible_railtype_list:       ["MONO"];
-                    powered_railtype_list:          ["MONO"];
-                }
-            }
-            if (param_metrowithcatenary == 3) {
-                property {
-                    compatible_railtype_list:       ["MGLV"];
-                    powered_railtype_list:          ["MGLV"];
-                }
-            }
         }
     }
     /* Modifying all possible combinations of the standardized railtype scheme will not work.
@@ -49,29 +24,6 @@ if (hasbit(param_otherengines,1)) {
                 compatible_railtype_list:       ["SAA3", "SAAZ", "SSAZ", "SUAZ"];
                 powered_railtype_list:          ["SAAZ", "SSAZ", "SUAZ"];
             }
-            // If moved to mono or maglev
-            if (param_metro == 2) {
-                property {
-                    compatible_railtype_list:       ["MONO"];
-                }
-            }
-            if (param_metro == 3) {
-                property {
-                    compatible_railtype_list:       ["MGLV"];
-                }
-            }
-            if (param_metrowithcatenary == 2) {
-                property {
-                    compatible_railtype_list:       ["MONO"];
-                    powered_railtype_list:          ["MONO"];
-                }
-            }
-            if (param_metrowithcatenary == 3) {
-                property {
-                    compatible_railtype_list:       ["MGLV"];
-                    powered_railtype_list:          ["MGLV"];
-                }
-            }
         }
     }
     // For the Dutch Trackset
@@ -82,58 +34,12 @@ if (hasbit(param_otherengines,1)) {
                 compatible_railtype_list:       ["SAA3", "SAAZ", "SSAZ", "SUAZ"];
                 powered_railtype_list:          ["SAAZ", "SSAZ", "SUAZ"];
             }
-            // If moved to mono or maglev
-            if (param_metro == 2) {
-                property {
-                    compatible_railtype_list:       ["MONO"];
-                }
-            }
-            if (param_metro == 3) {
-                property {
-                    compatible_railtype_list:       ["MGLV"];
-                }
-            }
-            if (param_metrowithcatenary == 2) {
-                property {
-                    compatible_railtype_list:       ["MONO"];
-                    powered_railtype_list:          ["MONO"];
-                }
-            }
-            if (param_metrowithcatenary == 3) {
-                property {
-                    compatible_railtype_list:       ["MGLV"];
-                    powered_railtype_list:          ["MGLV"];
-                }
-            }
         }
         item (FEAT_RAILTYPES, item_SADD) {
             property {
                 label:                          "SADD";
                 compatible_railtype_list:       ["SAA3", "SAAZ", "SSAZ", "SUAZ"];
                 powered_railtype_list:          ["SAAZ", "SSAZ", "SUAZ"];
-            }
-            // If moved to mono or maglev
-            if (param_metro == 2) {
-                property {
-                    compatible_railtype_list:       ["MONO"];
-                }
-            }
-            if (param_metro == 3) {
-                property {
-                    compatible_railtype_list:       ["MGLV"];
-                }
-            }
-            if (param_metrowithcatenary == 2) {
-                property {
-                    compatible_railtype_list:       ["MONO"];
-                    powered_railtype_list:          ["MONO"];
-                }
-            }
-            if (param_metrowithcatenary == 3) {
-                property {
-                    compatible_railtype_list:       ["MGLV"];
-                    powered_railtype_list:          ["MGLV"];
-                }
             }
         }
     }

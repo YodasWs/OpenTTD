@@ -1,9 +1,4 @@
 // Handle informing User in case of railtypes that could not be defined
-
-if (param_metro == 0 && param_metro == 0 && param_metro == 0 && param_metro == 0) {
-    // No railtypes in this set enabled
-    error(FATAL, string(str_no_railtypes_enabled));
-}
 if (param_railtype_activated == 0) {
     // There are no railtypes active, disable the grf
     error(FATAL, string(str_no_free_slots));

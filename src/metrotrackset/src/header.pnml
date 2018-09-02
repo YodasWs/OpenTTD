@@ -76,38 +76,6 @@ grf {
 			};
         }
     }
-    param 4 {
-        param_metro {
-            type:   int;
-            name:   string(str_param_metro_name);
-            desc:   string(str_param_metro_desc);
-            min_value:  0;
-            max_value:  3;
-            def_value:  1;
-            names:  {
-				0: string(str_param_metro_off);
-				1: string(str_param_metro_separate_default);
-				2: string(str_param_metro_replacemono);
-				3: string(str_param_metro_replacemglv);
-			};
-        }
-    }
-    param 5 {
-        param_metrowithcatenary {
-            type:   int;
-            name:   string(str_param_metrowithcatenary_name);
-            desc:   string(str_param_metrowithcatenary_desc);
-            min_value:  0;
-            max_value:  3;
-            def_value:  1;
-            names:  {
-				0: string(str_param_metro_off);
-				1: string(str_param_metro_separate_default);
-				2: string(str_param_metro_replacemono);
-				3: string(str_param_metro_replacemglv);
-			};
-        }
-    }
     param 6 {
         param_metrounderground {
             type:   bool;
