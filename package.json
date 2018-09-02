@@ -1,0 +1,25 @@
+{
+  "name": "NewGRF",
+  "version": "0.0.1",
+  "private": true,
+  "description": "I present to you, the world!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YodasWs/NewGRF.git"
+  },
+  "author": {
+    "name": "Sam Grundman",
+    "url": "https://github.com/YodasWs"
+  },
+  "bugs": {
+    "url": "https://github.com/YodasWs/NewGRF/issues"
+  },
+  "homepage": "https://github.com/YodasWs/NewGRF#readme",
+  "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0",
+	"gulp-exec": "^3.0.2",
+    "gulp-file-includer": "^1.0.0",
+	"@yodasws/gulp-json-replace": "^2.0.1",
+	"gulp-rename": "^1.4.0"
+  }
+}
