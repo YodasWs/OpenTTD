@@ -16,10 +16,10 @@
   },
   "homepage": "https://github.com/YodasWs/NewGRF#readme",
   "devDependencies": {
+    "@yodasws/gulp-file-includer": "^1.1.0",
     "@yodasws/gulp-json-replace": "^2.1.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-exec": "^3.0.2",
-    "gulp-file-includer": "^1.0.0",
     "gulp-rename": "^1.4.0"
   }
 }

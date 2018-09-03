@@ -2,6 +2,15 @@
 # yarn lockfile v1
 
 
+"@yodasws/gulp-file-includer@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@yodasws/gulp-file-includer/-/gulp-file-includer-1.1.0.tgz#a44ea6ebe43124c74cd8381229e0e138a4da772b"
+  dependencies:
+    concat-stream "~1.4.x"
+    event-stream "~3.1.x"
+    gulp-util "~2.2.x"
+    through2 "~0.4.x"
+
 "@yodasws/gulp-json-replace@^2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@yodasws/gulp-json-replace/-/gulp-json-replace-2.1.0.tgz#7ba9d84c31d811c3ad8ebbc6aa073d27719a05b9"
@@ -946,15 +955,6 @@ gulp-exec@^3.0.2:
     lodash.template "^4.4.0"
     plugin-error "^0.1.2"
     through2 "^2.0.3"
-
-gulp-file-includer@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/gulp-file-includer/-/gulp-file-includer-1.0.0.tgz#b082d58f3d16c85c29e4e2f508e53127af82941a"
-  dependencies:
-    concat-stream "~1.4.x"
-    event-stream "~3.1.x"
-    gulp-util "~2.2.x"
-    through2 "~0.4.x"
 
 gulp-rename@^1.4.0:
   version "1.4.0"

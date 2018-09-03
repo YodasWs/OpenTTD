@@ -7,4 +7,4 @@ grf {
 	url: string(URL);
 }
 
-#include('towns_kr.pnml')
+#include('towns.pnml')

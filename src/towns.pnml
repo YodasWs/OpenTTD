@@ -1,0 +1,10 @@
+#include('towns_us_nc.pnml')
+#include('towns_kr.pnml')
+
+town_names {
+	styles: string(STR_GAMEOPTIONS_TOWNNAMES);
+	{
+		town_names(towns_kr, 1),
+		town_names(towns_us_nc, 1),
+	}
+}
