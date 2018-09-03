@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@yodasws/gulp-file-includer@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@yodasws/gulp-file-includer/-/gulp-file-includer-1.1.0.tgz#a44ea6ebe43124c74cd8381229e0e138a4da772b"
+"@yodasws/gulp-file-includer@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@yodasws/gulp-file-includer/-/gulp-file-includer-1.1.1.tgz#226057acae0a817ed2cd0751842c218b3823a5a3"
   dependencies:
     concat-stream "~1.4.x"
     event-stream "~3.1.x"
