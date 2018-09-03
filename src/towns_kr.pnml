@@ -15,6 +15,7 @@ town_names(towns_kr_suffix) {
 }
 
 town_names {
+	styles: string(STR_GAMEOPTIONS_TOWNNAMES_KR);
 	{
 		town_names(towns_kr, 1),
 	}
