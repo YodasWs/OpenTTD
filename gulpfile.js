@@ -5,8 +5,8 @@ const argv = require('yargs')
 	.epilog(' ©2018 Sam Grundman')
 	.argv;
 
+const include = require('@yodasws/gulp-file-includer');
 const replace = require('@yodasws/gulp-json-replace');
-const include = require('gulp-file-includer');
 const rename = require('gulp-rename');
 const exec = require('gulp-exec');
 const gulp = require('gulp');
