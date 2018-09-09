@@ -1,2 +1,2 @@
 VERSION	:%version%
-TITLE	:%name%
+PACKAGE	:%name%

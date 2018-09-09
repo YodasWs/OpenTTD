@@ -1,0 +1,64 @@
+grf {
+	grfid : "1\f1\fan";
+	name : string(TOWNNAMES_US_NC_GRF_NAME);
+	desc : string(STR_GRF_DESCRIPTION);
+	version: 1;
+	min_compatible_version: 0;
+	url: string(URL);
+}
+
+town_names {
+	styles:string(TOWNNAMES_US_NC_GRF_NAME);
+	{
+		text("Charlotte", 1),
+		text("Raleigh", 1),
+		text("Greensboro", 1),
+		text("Durham", 1),
+		text("Winston-Salem", 1),
+		text("Fayetteville", 1),
+		text("Cary", 1),
+		text("Wilmington", 1),
+		text("High Point", 1),
+		text("Greenville", 1),
+		text("Concord", 1),
+		text("Asheville", 1),
+		text("Gastonia", 1),
+		text("Jacksonville", 1),
+		text("Chapel Hill", 1),
+		text("Huntersville", 1),
+		text("Rocky Mount", 1),
+		text("Burlington", 1),
+		text("Apex", 1),
+		text("Wilson", 1),
+		text("Kannapolis", 1),
+		text("Wake Forest", 1),
+		text("Hickory", 1),
+		text("Indian Trail", 1),
+		text("Mooresville", 1),
+		text("Holly Springs", 1),
+		text("Goldsboro", 1),
+		text("Monroe", 1),
+		text("Salisbury", 1),
+		text("Matthews", 1),
+		text("New Bern", 1),
+		text("Sanford", 1),
+		text("Cornelius", 1),
+		text("Garner", 1),
+		text("Fuquay-Varina", 1),
+		text("Mint Hill", 1),
+		text("Statesville", 1),
+		text("Thomasville", 1),
+		text("Morrisville", 1),
+		text("Asheboro", 1),
+		text("Kernersville", 1),
+		text("Carrboro", 1),
+		text("Clayton", 1),
+		text("Lumberton", 1),
+		text("Kinston", 1),
+		text("Clemmons", 1),
+		text("Shelby", 1),
+		text("Havelock", 1),
+		text("Leland", 1),
+		text("Boone", 1),
+	}
+}
