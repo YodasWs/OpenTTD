@@ -1,5 +1,5 @@
 grf {
-	grfid : "1\f1\fak";
+	grfid : "1\f5\fak";
 	name : string(TOWNNAMES_KR_GRF_NAME);
 	desc : string(STR_GRF_DESCRIPTION);
 	version: 1;
