@@ -2,7 +2,7 @@ grf {
 	grfid : "1\f5\fak";
 	name : string(TOWNNAMES_KR_GRF_NAME);
 	desc : string(TOWNNAMES_KR_GRF_DESC);
-	version: 1;
+	version: 2;
 	min_compatible_version: 0;
 	url: string(URL);
 }
@@ -39,11 +39,8 @@ town_names(towns_kr_base) {
 		text("Anseong", 7),
 		text("Asan", 7),
 		text("Boryeong", 7),
-		text("Busan", 7),
 		text("Chuncheon", 7),
 		text("Chungju", 7),
-		text("Daegu", 7),
-		text("Daejeon", 7),
 		text("Dangjin", 7),
 		text("Dongducheon", 7),
 		text("Donghae", 7),
@@ -59,8 +56,6 @@ town_names(towns_kr_base) {
 		text("Gunsan", 7),
 		text("Guri", 7),
 		text("Gwacheon", 7),
-		text("Gwangju", 7),
-		text("Gwangju", 7),
 		text("Gwangmyeong", 7),
 		text("Gwangyang", 7),
 		text("Gyeongju", 7),
@@ -69,7 +64,6 @@ town_names(towns_kr_base) {
 		text("Hanam", 7),
 		text("Icheon", 7),
 		text("Iksan", 7),
-		text("Incheon", 7),
 		text("Jecheon", 7),
 		text("Jeongeup", 7),
 		text("Jeju", 7),
@@ -90,10 +84,8 @@ town_names(towns_kr_base) {
 		text("Sacheon", 7),
 		text("Sangju", 7),
 		text("Samcheok", 7),
-		text("Sejong", 7),
 		text("Seogwipo", 7),
 		text("Seosan", 7),
-		text("Seoul", 7),
 		text("Siheung", 7),
 		text("Sokcho", 7),
 		text("Suncheon", 7),
@@ -101,7 +93,6 @@ town_names(towns_kr_base) {
 		text("Tongyeong", 7),
 		text("Uijeongbu", 7),
 		text("Uiwang", 7),
-		text("Ulsan", 7),
 		text("Wonju", 7),
 		text("Yangju", 7),
 		text("Yangsan", 7),
@@ -257,7 +248,6 @@ town_names(towns_kr_base) {
 		text("Sujeong", 5),
 		text("Suji", 5),
 		text("Suseong", 5),
-		text("Suyeong", 5),
 		text("Uichang", 5),
 		text("Wansan", 5),
 		text("Yangcheon", 5),
@@ -275,6 +265,77 @@ town_names(towns_kr_base) {
 		text("Jinjeon", 4),
 		text("Seonyudo", 4),
 		text("Seonyusudo", 4),
+	}
+}
+
+// Random Korean-sounding two-syllable names
+town_names(towns_kr_syllables) {
+	{
+		text("Chang", 1),
+		text("Dae", 1),
+		text("Ma", 1),
+	}
+	{
+		text("am", 1),
+		text("an", 1),
+		text("baek", 1),
+		text("bong", 1),
+		text("bu", 1),
+		text("chang", 1),
+		text("cheok", 1),
+		text("cheon", 1),
+		text("cheong", 1),
+		text("cho", 1),
+		text("dang", 1),
+		text("deok", 1),
+		text("do", 1),
+		text("dong", 1),
+		text("eup", 1),
+		text("gok", 1),
+		text("gu", 1),
+		text("gwang", 1),
+		text("gwipo", 1),
+		text("hae", 1),
+		text("hang", 1),
+		text("heung", 1),
+		text("hwa", 1),
+		text("in", 1),
+		text("jang", 1),
+		text("je", 1),
+		text("jeon", 1),
+		text("jin", 1),
+		text("jong", 1),
+		text("ju", 1),
+		text("leung", 1),
+		text("man", 1),
+		text("mi", 1),
+		text("myeong", 1),
+		text("nam", 1),
+		text("nan", 1),
+		text("neung", 1),
+		text("nyeong", 1),
+		text("po", 1),
+		text("pyeong", 1),
+		text("ri", 1),
+		text("ryang", 1),
+		text("ryong", 1),
+		text("san", 1),
+		text("seon", 1),
+		text("seong", 1),
+		text("sil", 1),
+		text("song", 1),
+		text("su", 1),
+		text("sun", 1),
+		text("taek", 1),
+		text("wan", 1),
+		text("wang", 1),
+		text("wi", 1),
+		text("wol", 1),
+		text("won", 1),
+		text("yang", 1),
+		text("ye", 1),
+		text("yeo", 1),
+		text("yeong", 1),
 	}
 }
 
@@ -301,6 +362,7 @@ town_names {
 	styles: string(TOWNNAMES_KR_GRF_NAME);
 	{
 		town_names(towns_kr_base, 1),
+		town_names(towns_kr_syllables, 1),
 	}
 	{
 		town_names(towns_kr_suffix, 1),
