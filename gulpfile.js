@@ -27,7 +27,7 @@ gulp.task('default', gulp.series(
 		},
 		() => {
 			// Merge PNMLs together
-			return gulp.src(['*.pnml'])
+			return gulp.src(['src/*.pnml'])
 				.pipe(rename((path) => {
 					path.extname = '.nml';
 				}))
