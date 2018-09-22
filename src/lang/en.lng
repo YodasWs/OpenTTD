@@ -5,4 +5,4 @@ URL:%homepage%
 TOWNNAMES_KR_GRF_NAME:%name% Korean Town Names
 TOWNNAMES_KR_GRF_DESC:Generates Korean-like names for your towns!{}{}v%version%{}{COPYRIGHT}2018
 TOWNNAMES_US_NC_GRF_NAME:%name% North Carolina Town Names
-TOWNNAMES_US_NC_GRF_DESC:Use the names of the 50 most populous cities in North Carolina{}{}v%version%{}{COPYRIGHT}2018
+TOWNNAMES_US_NC_GRF_DESC:Use the names of the 50 most populous cities in North Carolina{}{}v%version%{}{COPYRIGHT}2018{}{}{TINYFONT}{YELLOW}Note: This does mean that no matter how large your map is, there will be no more than 50 towns.{BLACK}
