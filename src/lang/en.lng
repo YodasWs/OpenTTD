@@ -1,6 +1,8 @@
 ##grflangid 0x00
-STR_GRF_NAME:{PACKAGE}, v{VERSION}
-STR_GRF_DESCRIPTION	:%description%{}{}{COPYRIGHT}2018
+STR_GRF_NAME:%name%
+STR_GRF_DESC:%description%{}{}v%version%{}{COPYRIGHT}2018
 URL:%homepage%
-TOWNNAMES_KR_GRF_NAME:{PACKAGE} Korean Town Names
-TOWNNAMES_US_NC_GRF_NAME:{PACKAGE} North Carolina Town Names
+TOWNNAMES_KR_GRF_NAME:%name% Korean Town Names
+TOWNNAMES_KR_GRF_DESC:Generates Korean-like names for your towns!{}{}v%version%{}{COPYRIGHT}2018
+TOWNNAMES_US_NC_GRF_NAME:%name% North Carolina Town Names
+TOWNNAMES_US_NC_GRF_DESC:Use the names of the 50 most populous cities in North Carolina{}{}v%version%{}{COPYRIGHT}2018

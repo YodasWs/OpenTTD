@@ -1,7 +1,7 @@
 grf {
 	grfid : "1\f5\fan";
 	name : string(TOWNNAMES_US_NC_GRF_NAME);
-	desc : string(STR_GRF_DESCRIPTION);
+	desc : string(TOWNNAMES_US_NC_GRF_DESC);
 	version: 1;
 	min_compatible_version: 0;
 	url: string(URL);

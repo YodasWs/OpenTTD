@@ -1,7 +1,7 @@
 grf {
 	grfid : "1\f5\fak";
 	name : string(TOWNNAMES_KR_GRF_NAME);
-	desc : string(STR_GRF_DESCRIPTION);
+	desc : string(TOWNNAMES_KR_GRF_DESC);
 	version: 1;
 	min_compatible_version: 0;
 	url: string(URL);
