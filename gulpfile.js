@@ -11,11 +11,11 @@ const rename = require('gulp-rename');
 const exec = require('gulp-exec');
 const gulp = require('gulp');
 const fs = require('fs');
-const packageJson = JSON.parse(fs.readFileSync('./package.json'));
 
 gulp.task('default', gulp.series(
 	gulp.parallel(
 		() => {
+			// Replace Tags from package.json
 			return gulp.src(['src/**/*.{lng,txt}'])
 				.pipe(replace({
 					src: 'package.json',
@@ -23,7 +23,7 @@ gulp.task('default', gulp.series(
 					prefix: '%',
 					suffix: '%',
 				}))
-				.pipe(gulp.dest('.'));
+				.pipe(gulp.dest('build/'));
 		},
 		() => {
 			// Merge PNMLs together
@@ -32,19 +32,19 @@ gulp.task('default', gulp.series(
 					path.extname = '.nml';
 				}))
 				.pipe(include({
-					basePath: './src/',
+					basePath: 'src/',
 					prefix: '#',
 				}))
 				.pipe(replace({
 					src: 'package.json',
 				}))
-				.pipe(gulp.dest('.'));
+				.pipe(gulp.dest('build/'));
 		}
 	),
 	() => {
 		// Compile NMLs
-		return gulp.src(['*.nml'])
-			.pipe(exec('nmlc <%= file.path %> --default-lang=en.lng', {
+		return gulp.src(['build/*.nml'])
+			.pipe(exec('nmlc <%= file.path %> --default-lang=en.lng --lang-dir=build/lang', {
 			}))
 			.pipe(exec.reporter({
 				strerr: true,
