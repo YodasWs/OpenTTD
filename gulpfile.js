@@ -28,11 +28,26 @@ gulp.task('build-vehicles', gulp.series(
 				return str;
 			}))
 			.pipe(plugins.patternReplace([
-				[/(?<!\\)"/g, ''],
+				/*
+				 * Remove JSON syntax
+				 */
+				// Remove wrapping array brackets
 				[/(^\[\s*|\s*\]\s*$)/g, ''],
+				// Remove wrapping quotes
+				[/(?<!\\)"/g, ''],
+				// Remove backslashes
 				[/\\"/g, '"'],
 				[/(\\{2})/g, '\\'],
-				[/\s*{\s*item_feature:\s*([^,]+),\n/g, '\nitem ($1) {\n'],
+				// Fix block open/close
+				[/\s*:\s*{/g, ' {'],
+				[/},/g, '}'],
+				// Fix indent
+				[/^\t/gm, ''],
+				/*
+				 * Transform properties to NML
+				 */
+				// Start item_feature block
+				[/\s*{\s*item_feature:\s*(.+),\n/g, '\nitem ($1) {\n'],
 			]))
 			.pipe(plugins.extReplace('.pnml'))
 			.pipe(gulp.dest('build/'));
