@@ -5,14 +5,16 @@ const argv = require('yargs')
 	.epilog(' ©2018 Sam Grundman')
 	.argv;
 
-const plugins = require('gulp-load-plugins')({
-	rename: {
-		'gulp-file': 'newFile',
-	},
-});
-plugins.patternReplace = require('@yodasws/gulp-pattern-replace');
-plugins.jsonReplace = require('@yodasws/gulp-json-replace');
-plugins.include = require('@yodasws/gulp-file-includer');
+const plugins = {
+	...require('gulp-load-plugins')({
+		rename: {
+			'gulp-file': 'newFile',
+		},
+	}),
+	patternReplace: require('@yodasws/gulp-pattern-replace'),
+	jsonReplace: require('@yodasws/gulp-json-replace'),
+	include: require('@yodasws/gulp-file-includer'),
+}
 const gulp = require('gulp');
 const fs = require('fs');
 
@@ -27,8 +29,10 @@ gulp.task('build-vehicles', gulp.series(
 			}))
 			.pipe(plugins.patternReplace([
 				[/(?<!\\)"/g, ''],
+				[/(^\[\s*|\s*\]\s*$)/g, ''],
 				[/\\"/g, '"'],
 				[/(\\{2})/g, '\\'],
+				[/\s*{\s*item_feature:\s*([^,]+),\n/g, '\nitem ($1) {\n'],
 			]))
 			.pipe(plugins.extReplace('.pnml'))
 			.pipe(gulp.dest('build/'));
