@@ -18,8 +18,13 @@
   "devDependencies": {
     "@yodasws/gulp-file-includer": "^1.1.1",
     "@yodasws/gulp-json-replace": "^2.1.0",
+    "@yodasws/gulp-pattern-replace": "^1.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-csvtojson": "^0.2.0",
     "gulp-exec": "^3.0.2",
-    "gulp-rename": "^1.4.0"
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-transform": "^3.0.5"
   }
 }

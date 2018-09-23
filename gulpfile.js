@@ -5,12 +5,35 @@ const argv = require('yargs')
 	.epilog(' ©2018 Sam Grundman')
 	.argv;
 
-const include = require('@yodasws/gulp-file-includer');
-const replace = require('@yodasws/gulp-json-replace');
-const rename = require('gulp-rename');
-const exec = require('gulp-exec');
+const plugins = require('gulp-load-plugins')({
+	rename: {
+		'gulp-file': 'newFile',
+	},
+});
+plugins.patternReplace = require('@yodasws/gulp-pattern-replace');
+plugins.jsonReplace = require('@yodasws/gulp-json-replace');
+plugins.include = require('@yodasws/gulp-file-includer');
 const gulp = require('gulp');
 const fs = require('fs');
+
+gulp.task('build-vehicles', gulp.series(
+	() => {
+		// Convert Vehicle Tables to NML
+		return gulp.src(['src/*.csv'])
+			.pipe(plugins.csvtojson())
+			.pipe(plugins.transform('utf8', (content, file) => {
+				let str = JSON.stringify(JSON.parse(content), null, '\t');
+				return str;
+			}))
+			.pipe(plugins.patternReplace([
+				[/(?<!\\)"/g, ''],
+				[/\\"/g, '"'],
+				[/(\\{2})/g, '\\'],
+			]))
+			.pipe(plugins.extReplace('.pnml'))
+			.pipe(gulp.dest('build/'));
+	}
+));
 
 gulp.task('default', gulp.series(
 	gulp.parallel(
@@ -28,14 +51,14 @@ gulp.task('default', gulp.series(
 		() => {
 			// Merge PNMLs together
 			return gulp.src(['src/*.pnml'])
-				.pipe(rename((path) => {
+				.pipe(plugins.rename((path) => {
 					path.extname = '.nml';
 				}))
-				.pipe(include({
+				.pipe(plugins.include({
 					basePath: 'src/',
 					prefix: '#',
 				}))
-				.pipe(replace({
+				.pipe(plugins.jsonReplace({
 					src: 'package.json',
 				}))
 				.pipe(gulp.dest('build/'));
@@ -44,9 +67,9 @@ gulp.task('default', gulp.series(
 	() => {
 		// Compile NMLs
 		return gulp.src(['build/*.nml'])
-			.pipe(exec('nmlc <%= file.path %> --default-lang=en.lng --lang-dir=build/lang', {
+			.pipe(plugins.exec('nmlc <%= file.path %> --default-lang=en.lng --lang-dir=build/lang', {
 			}))
-			.pipe(exec.reporter({
+			.pipe(plugins.exec.reporter({
 				strerr: true,
 				strout: true,
 				err: true,
