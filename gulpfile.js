@@ -55,6 +55,10 @@ gulp.task('build-vehicles', gulp.series(
 				// Fix block open/close
 				[/\s*:\s*{/g, ' {'],
 				[/},/g, '}'],
+				// Remove empty properties
+				[/\s*\w+\s*:\s*,?\n/g, '\n'],
+				// Remove empty lines
+				[/\n+/g, '\n'],
 				// Fix indent
 				[/^\t/gm, ''],
 				/*
