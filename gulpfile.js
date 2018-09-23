@@ -1,6 +1,14 @@
 'use strict';
 
 const argv = require('yargs')
+	.command('build-vehicles', 'Build NML from vehicle tables', {
+		file: {
+			alias: 'f',
+			desc: 'Vehicle table to convert',
+			type: 'string',
+			normalize: true,
+		},
+	})
 	.help('?')
 	.epilog(' ©2018 Sam Grundman')
 	.argv;
@@ -19,9 +27,15 @@ const gulp = require('gulp');
 const fs = require('fs');
 
 gulp.task('build-vehicles', gulp.series(
-	() => {
+	(done) => {
+		// Check that file is a CSV
+		let file = argv.file || 'src/*.csv';
+		if (typeof file === 'string' && !/\.csv$/.test(file)) {
+			done();
+			return;
+		}
 		// Convert Vehicle Tables to NML
-		return gulp.src(['src/*.csv'])
+		return gulp.src(file)
 			.pipe(plugins.csvtojson())
 			.pipe(plugins.transform('utf8', (content, file) => {
 				let str = JSON.stringify(JSON.parse(content), null, '\t');
@@ -51,10 +65,11 @@ gulp.task('build-vehicles', gulp.series(
 			]))
 			.pipe(plugins.extReplace('.pnml'))
 			.pipe(gulp.dest('build/'));
-	}
+	},
 ));
 
 gulp.task('default', gulp.series(
+	// TODO: Check GRFIDs for uniqueness
 	gulp.parallel(
 		() => {
 			// Replace Tags from package.json
@@ -81,7 +96,7 @@ gulp.task('default', gulp.series(
 					src: 'package.json',
 				}))
 				.pipe(gulp.dest('build/'));
-		}
+		},
 	),
 	() => {
 		// Compile NMLs
@@ -93,5 +108,5 @@ gulp.task('default', gulp.series(
 				strout: true,
 				err: true,
 			}));
-	}
+	},
 ));
