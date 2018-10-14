@@ -113,4 +113,15 @@ gulp.task('default', gulp.series(
 				err: true,
 			}));
 	},
+	() => {
+		// Move GRFs
+		return gulp.src(['build/*.grf'])
+			.pipe(plugins.exec('cp <%= file.path %> /mnt/c/Users/Sam/Documents/OpenTTD/newgrf', {
+			}))
+			.pipe(plugins.exec.reporter({
+				strerr: true,
+				strout: true,
+				err: true,
+			}));
+	},
 ));
