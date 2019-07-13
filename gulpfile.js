@@ -22,7 +22,7 @@ const plugins = {
 	patternReplace: require('@yodasws/gulp-pattern-replace'),
 	jsonReplace: require('@yodasws/gulp-json-replace'),
 	include: require('@yodasws/gulp-file-includer'),
-}
+};
 const gulp = require('gulp');
 const fs = require('fs');
 
@@ -78,7 +78,7 @@ gulp.task('default', gulp.series(
 		() => {
 			// Replace Tags from package.json
 			return gulp.src(['src/**/*.{lng,txt}'])
-				.pipe(replace({
+				.pipe(plugins.jsonReplace({
 					src: 'package.json',
 					keepNoMatch: true,
 					prefix: '%',
